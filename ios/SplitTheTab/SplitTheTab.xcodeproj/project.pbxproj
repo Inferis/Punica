@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2F3B2B9146FFA170004BAD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2B8146FFA170004BAD6 /* UIKit.framework */; };
+		E2F3B2BB146FFA170004BAD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2BA146FFA170004BAD6 /* Foundation.framework */; };
+		E2F3B2BD146FFA170004BAD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2BC146FFA170004BAD6 /* CoreGraphics.framework */; };
+		E2F3B2C3146FFA170004BAD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2C1146FFA170004BAD6 /* InfoPlist.strings */; };
+		E2F3B2C5146FFA170004BAD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2C4146FFA170004BAD6 /* main.m */; };
+		E2F3B2C9146FFA170004BAD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */; };
+		E2F3B2CC146FFA170004BAD6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2CB146FFA170004BAD6 /* RootViewController.m */; };
+		E2F3B2CF146FFA170004BAD6 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2CE146FFA170004BAD6 /* DataViewController.m */; };
+		E2F3B2D2146FFA170004BAD6 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2D1146FFA170004BAD6 /* ModelController.m */; };
+		E2F3B2D5146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */; };
+		E2F3B2D8146FFA170004BAD6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2F3B2B4146FFA170004BAD6 /* SplitTheTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F3B2B8146FFA170004BAD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E2F3B2BA146FFA170004BAD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2F3B2BC146FFA170004BAD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E2F3B2C0146FFA170004BAD6 /* SplitTheTab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplitTheTab-Info.plist"; sourceTree = "<group>"; };
+		E2F3B2C2146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2F3B2C4146FFA170004BAD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2F3B2C6146FFA170004BAD6 /* SplitTheTab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitTheTab-Prefix.pch"; sourceTree = "<group>"; };
+		E2F3B2C7146FFA170004BAD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2F3B2CA146FFA170004BAD6 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E2F3B2CB146FFA170004BAD6 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E2F3B2CD146FFA170004BAD6 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		E2F3B2CE146FFA170004BAD6 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		E2F3B2D0146FFA170004BAD6 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		E2F3B2D1146FFA170004BAD6 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		E2F3B2D4146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E2F3B2D7146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2F3B2B1146FFA170004BAD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F3B2B9146FFA170004BAD6 /* UIKit.framework in Frameworks */,
+				E2F3B2BB146FFA170004BAD6 /* Foundation.framework in Frameworks */,
+				E2F3B2BD146FFA170004BAD6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2F3B2A9146FFA170004BAD6 = {
+			isa = PBXGroup;
+			children = (
+				E2F3B2BE146FFA170004BAD6 /* SplitTheTab */,
+				E2F3B2B7146FFA170004BAD6 /* Frameworks */,
+				E2F3B2B5146FFA170004BAD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2F3B2B5146FFA170004BAD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2F3B2B4146FFA170004BAD6 /* SplitTheTab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2F3B2B7146FFA170004BAD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2F3B2B8146FFA170004BAD6 /* UIKit.framework */,
+				E2F3B2BA146FFA170004BAD6 /* Foundation.framework */,
+				E2F3B2BC146FFA170004BAD6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2F3B2BE146FFA170004BAD6 /* SplitTheTab */ = {
+			isa = PBXGroup;
+			children = (
+				E2F3B2C7146FFA170004BAD6 /* AppDelegate.h */,
+				E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */,
+				E2F3B2CA146FFA170004BAD6 /* RootViewController.h */,
+				E2F3B2CB146FFA170004BAD6 /* RootViewController.m */,
+				E2F3B2CD146FFA170004BAD6 /* DataViewController.h */,
+				E2F3B2CE146FFA170004BAD6 /* DataViewController.m */,
+				E2F3B2D0146FFA170004BAD6 /* ModelController.h */,
+				E2F3B2D1146FFA170004BAD6 /* ModelController.m */,
+				E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */,
+				E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */,
+				E2F3B2BF146FFA170004BAD6 /* Supporting Files */,
+			);
+			path = SplitTheTab;
+			sourceTree = "<group>";
+		};
+		E2F3B2BF146FFA170004BAD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2F3B2C0146FFA170004BAD6 /* SplitTheTab-Info.plist */,
+				E2F3B2C1146FFA170004BAD6 /* InfoPlist.strings */,
+				E2F3B2C4146FFA170004BAD6 /* main.m */,
+				E2F3B2C6146FFA170004BAD6 /* SplitTheTab-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2F3B2B3146FFA170004BAD6 /* SplitTheTab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2F3B2DB146FFA170004BAD6 /* Build configuration list for PBXNativeTarget "SplitTheTab" */;
+			buildPhases = (
+				E2F3B2B0146FFA170004BAD6 /* Sources */,
+				E2F3B2B1146FFA170004BAD6 /* Frameworks */,
+				E2F3B2B2146FFA170004BAD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplitTheTab;
+			productName = SplitTheTab;
+			productReference = E2F3B2B4146FFA170004BAD6 /* SplitTheTab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2F3B2AB146FFA170004BAD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Adriaenssen BVBA";
+			};
+			buildConfigurationList = E2F3B2AE146FFA170004BAD6 /* Build configuration list for PBXProject "SplitTheTab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E2F3B2A9146FFA170004BAD6;
+			productRefGroup = E2F3B2B5146FFA170004BAD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2F3B2B3146FFA170004BAD6 /* SplitTheTab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2F3B2B2146FFA170004BAD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F3B2C3146FFA170004BAD6 /* InfoPlist.strings in Resources */,
+				E2F3B2D5146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard in Resources */,
+				E2F3B2D8146FFA170004BAD6 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2F3B2B0146FFA170004BAD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F3B2C5146FFA170004BAD6 /* main.m in Sources */,
+				E2F3B2C9146FFA170004BAD6 /* AppDelegate.m in Sources */,
+				E2F3B2CC146FFA170004BAD6 /* RootViewController.m in Sources */,
+				E2F3B2CF146FFA170004BAD6 /* DataViewController.m in Sources */,
+				E2F3B2D2146FFA170004BAD6 /* ModelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E2F3B2C1146FFA170004BAD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2F3B2C2146FFA170004BAD6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2F3B2D4146FFA170004BAD6 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2F3B2D7146FFA170004BAD6 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2F3B2D9146FFA170004BAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2F3B2DA146FFA170004BAD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2F3B2DC146FFA170004BAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplitTheTab/SplitTheTab-Prefix.pch";
+				INFOPLIST_FILE = "SplitTheTab/SplitTheTab-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E2F3B2DD146FFA170004BAD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplitTheTab/SplitTheTab-Prefix.pch";
+				INFOPLIST_FILE = "SplitTheTab/SplitTheTab-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2F3B2AE146FFA170004BAD6 /* Build configuration list for PBXProject "SplitTheTab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2F3B2D9146FFA170004BAD6 /* Debug */,
+				E2F3B2DA146FFA170004BAD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2F3B2DB146FFA170004BAD6 /* Build configuration list for PBXNativeTarget "SplitTheTab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2F3B2DC146FFA170004BAD6 /* Debug */,
+				E2F3B2DD146FFA170004BAD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2F3B2AB146FFA170004BAD6 /* Project object */;
+}
