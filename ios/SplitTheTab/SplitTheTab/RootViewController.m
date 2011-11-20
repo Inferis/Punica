@@ -7,83 +7,77 @@
 //
 
 #import "RootViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
-#import "ModelController.h"
+@interface RootViewController () {
+    BOOL pageControlIsChangingPage;
+    NSArray* items;
+}
 
-#import "DataViewController.h"
-
-@interface RootViewController ()
-@property (readonly, strong, nonatomic) ModelController *modelController;
 @end
 
 @implementation RootViewController
 
-@synthesize pageViewController = _pageViewController;
-@synthesize modelController = _modelController;
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
+@synthesize pageControl = _pageControl;
+@synthesize pageControlHolder = _pageControlHolder;
+@synthesize pagesView = _pagesView;
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    // Configure the page view controller and add it as a child view controller.
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController.delegate = self;
 
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
+    pageControlIsChangingPage = NO;
 
-    self.pageViewController.dataSource = self.modelController;
-
-    [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
-
-    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-    CGRect pageViewRect = self.view.bounds;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
+    items = [NSArray arrayWithObjects:@"Le Pal 2011", @"Feestweekend", @"Zeilen Lanzarote", @"#maagd", @"Kroegentocht", @"Nog één", @"Verbeeckx pesten", @"Hoeren", @"Verkiezingen nu", @"ABC", @"DEF", @"EFG", @"HIJ", @"KLM", @"NOP", @"1", @"2", @"3", @"4", @"5", @"6", nil];
+    
+    //self.pagesView.frame = (CGRect) { 0, 10, self.pagesView.frame.size.width, 416 };
+    NSLog(@"Frame = %@", NSStringFromCGRect(self.pagesView.frame));
+    if (_pageControl) {
+        self.pagesView.contentSize = (CGSize) { self.pagesView.frame.size.width, self.pagesView.frame.size.height * items.count };
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"black-Linen.png"]];
+        self.pageControl.frame = (CGRect) { CGRectGetMidX(self.pageControlHolder.frame)-200, CGRectGetMidY(self.pageControlHolder.frame)-self.pageControlHolder.frame.size.width/2, 400, self.pageControlHolder.frame.size.width };
+        self.pageControl.transform = CGAffineTransformMakeRotation(M_PI_2);
+        
+        self.pageControl.numberOfPages = items.count;
+        int i = 0;
+        for (NSString* item in items) {
+            NSLog(@"%f", self.pagesView.frame.size.height);
+            UIView* view = [[UIView alloc] initWithFrame:(CGRect) { 0, 416*i, self.pagesView.frame.size.width, 416 }];
+            //view.backgroundColor = i % 2 ? [UIColor redColor] : [UIColor blueColor];
+        
+            UIImageView* bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pages.png"]];
+            bg.frame = view.bounds;
+            [view addSubview:bg];
+            
+            UILabel* title = [[UILabel alloc] initWithFrame:(CGRect) { 27, 33, view.bounds.size.width - 54, 38 }];
+            title.textColor = [UIColor whiteColor];
+            title.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:17];
+            title.textAlignment = UITextAlignmentCenter;
+            title.shadowColor = [UIColor colorWithWhite:0 alpha:0.6];
+            title.shadowOffset = (CGSize) { 0, -1 };
+            title.text = [items objectAtIndex:i];
+            title.opaque = NO;
+            title.backgroundColor = [UIColor clearColor];
+            [view addSubview:title];
+            
+            [self.pagesView addSubview:view];
+            
+            NSLog(@"view = %@", [view debugDescription]);
+            i++;
+        }
     }
-    self.pageViewController.view.frame = pageViewRect;
 
-    [self.pageViewController didMoveToParentViewController:self];    
-
-    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
-    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            
+        
+    }
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -96,56 +90,45 @@
     }
 }
 
-- (ModelController *)modelController
+#pragma mark - ScrollView delegate
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate stuff
+- (void)scrollViewDidScroll:(UIScrollView *)_scrollView
 {
-    /*
-     Return the model controller object, creating it if necessary.
-     In more complex implementations, the model controller may be passed to the view controller.
-     */
-    if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
+    if (pageControlIsChangingPage) {
+        return;
     }
-    return _modelController;
-}
-
-#pragma mark - UIPageViewController delegate methods
-
-/*
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
-{
     
+	/*
+	 *	We switch page at 50% across
+	 */
+    CGFloat pageHeight = _scrollView.frame.size.height;
+    int page = floor((_scrollView.contentOffset.y - pageHeight / 2) / pageHeight) + 1;
+    self.pageControl.currentPage = page;
 }
- */
 
-- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)_scrollView 
 {
-    if (UIInterfaceOrientationIsPortrait(orientation) || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
-        // In portrait orientation or on iPhone: Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
-        
-        UIViewController *currentViewController = [self.pageViewController.viewControllers objectAtIndex:0];
-        NSArray *viewControllers = [NSArray arrayWithObject:currentViewController];
-        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
-        
-        self.pageViewController.doubleSided = NO;
-        return UIPageViewControllerSpineLocationMin;
-    }
+    pageControlIsChangingPage = NO;
+}
 
-    // In landscape orientation: Set set the spine location to "mid" and the page view controller's view controllers array to contain two view controllers. If the current page is even, set it to contain the current and next view controllers; if it is odd, set the array to contain the previous and current view controllers.
-    DataViewController *currentViewController = [self.pageViewController.viewControllers objectAtIndex:0];
-    NSArray *viewControllers = nil;
-
-    NSUInteger indexOfCurrentViewController = [self.modelController indexOfViewController:currentViewController];
-    if (indexOfCurrentViewController == 0 || indexOfCurrentViewController % 2 == 0) {
-        UIViewController *nextViewController = [self.modelController pageViewController:self.pageViewController viewControllerAfterViewController:currentViewController];
-        viewControllers = [NSArray arrayWithObjects:currentViewController, nextViewController, nil];
-    } else {
-        UIViewController *previousViewController = [self.modelController pageViewController:self.pageViewController viewControllerBeforeViewController:currentViewController];
-        viewControllers = [NSArray arrayWithObjects:previousViewController, currentViewController, nil];
-    }
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
-
-
-    return UIPageViewControllerSpineLocationMid;
+#pragma mark -
+#pragma mark PageControl stuff
+- (IBAction)changePage:(id)sender 
+{
+	/*
+	 *	Change the scroll view
+	 */
+    CGRect frame = self.pagesView.frame;
+    frame = (CGRect) { 0, frame.size.height * self.pageControl.currentPage, frame.size }; 
+	
+    [self.pagesView scrollRectToVisible:frame animated:YES];
+    
+	/*
+	 *	When the animated scrolling finishings, scrollViewDidEndDecelerating will turn this off
+	 */
+    pageControlIsChangingPage = YES;
 }
 
 @end

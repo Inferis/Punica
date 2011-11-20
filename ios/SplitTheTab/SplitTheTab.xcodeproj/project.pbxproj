@@ -18,6 +18,11 @@
 		E2F3B2D2146FFA170004BAD6 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2D1146FFA170004BAD6 /* ModelController.m */; };
 		E2F3B2D5146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */; };
 		E2F3B2D8146FFA170004BAD6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */; };
+		E2F3B2E014700C190004BAD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2DF14700C190004BAD6 /* QuartzCore.framework */; };
+		E2F3B2E4147054350004BAD6 /* black-Linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2E2147054350004BAD6 /* black-Linen.png */; };
+		E2F3B2E5147054350004BAD6 /* leather_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2E3147054350004BAD6 /* leather_1.png */; };
+		E2F3B2EC147089D20004BAD6 /* pages.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2EA147089D20004BAD6 /* pages.png */; };
+		E2F3B2ED147089D20004BAD6 /* pages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2EB147089D20004BAD6 /* pages@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		E2F3B2D1146FFA170004BAD6 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		E2F3B2D4146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E2F3B2D7146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E2F3B2DF14700C190004BAD6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E2F3B2E2147054350004BAD6 /* black-Linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-Linen.png"; sourceTree = "<group>"; };
+		E2F3B2E3147054350004BAD6 /* leather_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leather_1.png; sourceTree = "<group>"; };
+		E2F3B2EA147089D20004BAD6 /* pages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pages.png; sourceTree = "<group>"; };
+		E2F3B2EB147089D20004BAD6 /* pages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pages@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F3B2E014700C190004BAD6 /* QuartzCore.framework in Frameworks */,
 				E2F3B2B9146FFA170004BAD6 /* UIKit.framework in Frameworks */,
 				E2F3B2BB146FFA170004BAD6 /* Foundation.framework in Frameworks */,
 				E2F3B2BD146FFA170004BAD6 /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +69,7 @@
 		E2F3B2A9146FFA170004BAD6 = {
 			isa = PBXGroup;
 			children = (
+				E2F3B2DF14700C190004BAD6 /* QuartzCore.framework */,
 				E2F3B2BE146FFA170004BAD6 /* SplitTheTab */,
 				E2F3B2B7146FFA170004BAD6 /* Frameworks */,
 				E2F3B2B5146FFA170004BAD6 /* Products */,
@@ -85,6 +97,8 @@
 		E2F3B2BE146FFA170004BAD6 /* SplitTheTab */ = {
 			isa = PBXGroup;
 			children = (
+				E2F3B2E1147054350004BAD6 /* Assets */,
+				E2F3B2DE147007F70004BAD6 /* iPhone */,
 				E2F3B2C7146FFA170004BAD6 /* AppDelegate.h */,
 				E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */,
 				E2F3B2CA146FFA170004BAD6 /* RootViewController.h */,
@@ -109,6 +123,24 @@
 				E2F3B2C6146FFA170004BAD6 /* SplitTheTab-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2F3B2DE147007F70004BAD6 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		E2F3B2E1147054350004BAD6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E2F3B2EA147089D20004BAD6 /* pages.png */,
+				E2F3B2EB147089D20004BAD6 /* pages@2x.png */,
+				E2F3B2E2147054350004BAD6 /* black-Linen.png */,
+				E2F3B2E3147054350004BAD6 /* leather_1.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +197,10 @@
 				E2F3B2C3146FFA170004BAD6 /* InfoPlist.strings in Resources */,
 				E2F3B2D5146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E2F3B2D8146FFA170004BAD6 /* MainStoryboard_iPad.storyboard in Resources */,
+				E2F3B2E4147054350004BAD6 /* black-Linen.png in Resources */,
+				E2F3B2E5147054350004BAD6 /* leather_1.png in Resources */,
+				E2F3B2EC147089D20004BAD6 /* pages.png in Resources */,
+				E2F3B2ED147089D20004BAD6 /* pages@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

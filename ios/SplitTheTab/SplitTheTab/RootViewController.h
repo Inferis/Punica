@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface RootViewController : UIViewController <UIScrollViewDelegate>
 
-@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) IBOutlet UIPageControl* pageControl;
+@property (strong, nonatomic) IBOutlet UIView* pageControlHolder;
+@property (strong, nonatomic) IBOutlet UIScrollView* pagesView;
+
+- (IBAction)changePage:(id)sender; 
 
 @end
