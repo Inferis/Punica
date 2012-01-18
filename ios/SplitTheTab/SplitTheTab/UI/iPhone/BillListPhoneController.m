@@ -7,6 +7,13 @@
 //
 
 #import "BillListPhoneController.h"
+#import "IIViewDeckController.h"
+
+@interface BillListPhoneController () <IIViewDeckControllerDelegate> {
+    CGRect _originalFrame;
+}
+
+@end
 
 @implementation BillListPhoneController
 
@@ -33,7 +40,11 @@
 {
     [super viewDidLoad];
 
+    self.tableView.scrollsToTop = NO; // so that centerview will
     self.title = @"Tabs";
+
+    _originalFrame = self.navigationController.view.frame;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -74,20 +85,33 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - viewDeck controller
+
+- (BOOL)viewDeckControllerWillOpenLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated {
+//    self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 220);
+//    [self.navigationController.view setNeedsLayout];
+    return YES;
+}
+
+- (BOOL)viewDeckControllerWillCloseLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated {
+//    [UIView animateWithDuration:0.3 animations:^{
+//        self.navigationController.view.frame = _originalFrame;
+//        [self.navigationController.view setNeedsLayout];
+//    }];
+    
+    return YES;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,6 +124,7 @@
     }
     
     // Configure the cell...
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -147,13 +172,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller) {
+    }];
 }
 
 @end
