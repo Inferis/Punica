@@ -208,6 +208,13 @@
 
 #pragma mark - Bookkeeping
 
+- (NSArray*)controllers {
+    NSMutableArray* result = [NSMutableArray arrayWithObject:self.centerController];
+    if (self.leftController) [result addObject:self.leftController];
+    if (self.rightController) [result addObject:self.rightController];
+    return [NSArray arrayWithArray:result];
+}
+
 - (CGRect)referenceBounds {
     return self.referenceView.bounds;
 }
@@ -773,7 +780,16 @@
         [self centerViewHidden];
     }
 
-
+    if (panner.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"hidden = %d %d", self.leftController.view.hidden, self.rightController.view.hidden);
+        if (x > 0) {
+            BOOL ok = [self checkDelegate:@selector(viewDeckControllerWillOpenLeftView:animated:) animated:NO];
+        }
+        else if (x < 0) {
+            BOOL ok = [self checkDelegate:@selector(viewDeckControllerWillOpenRightView:animated:) animated:NO];
+        }
+    }
+    
     if (panner.state == UIGestureRecognizerStateEnded) {
         if ([panner velocityInView:self.referenceView].x > 0) {
             if (x > (self.referenceBounds.size.width-self.rightLedge)/3.0) 
@@ -852,17 +868,40 @@
 #pragma mark - Delegate convenience methods
 
 - (BOOL)checkDelegate:(SEL)selector animated:(BOOL)animated {
-    if (!self.delegate || ![self.delegate respondsToSelector:selector]) 
-        return YES; // assume YES
-    
-    return (BOOL)objc_msgSend(self.delegate, selector, self, animated);
+    BOOL ok = YES;
+    if (self.delegate && [self.delegate respondsToSelector:selector]) 
+        ok = ok & (BOOL)objc_msgSend(self.delegate, selector, self, animated);
+
+    for (UIViewController* controller in self.controllers) {
+        // check controller first
+        if ([controller respondsToSelector:selector]) 
+            ok = ok & (BOOL)objc_msgSend(controller, selector, self, animated);
+        // if that fails, check if it's a navigation controller and use the top controller
+        else if ([controller isKindOfClass:[UINavigationController class]]) {
+            UIViewController* topController = ((UINavigationController*)controller).topViewController;
+            if ([topController respondsToSelector:selector]) 
+                ok = ok & (BOOL)objc_msgSend(topController, selector, self, animated);
+        }
+    }
+
+    return ok;
 }
 
 - (void)performDelegate:(SEL)selector animated:(BOOL)animated {
-    if (!self.delegate || ![self.delegate respondsToSelector:selector]) 
-        return;
-    
-    objc_msgSend(self.delegate, selector, self, animated);
+    if (self.delegate && [self.delegate respondsToSelector:selector]) 
+        objc_msgSend(self.delegate, selector, self, animated);
+
+    for (UIViewController* controller in self.controllers) {
+        // check controller first
+        if ([controller respondsToSelector:selector]) 
+            objc_msgSend(self.centerController, selector, self, animated);
+        // if that fails, check if it's a navigation controller and use the top controller
+        else if ([controller isKindOfClass:[UINavigationController class]]) {
+            UIViewController* topController = ((UINavigationController*)controller).topViewController;
+            if ([topController respondsToSelector:selector]) 
+                objc_msgSend(topController, selector, self, animated);
+        }
+    }
 }
 
 
