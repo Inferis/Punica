@@ -134,6 +134,7 @@
 @synthesize centerTapper = _centerTapper;
 @synthesize centerView = _centerView;
 @synthesize rotationBehavior = _rotationBehavior;
+@synthesize enabled = _enabled;
 
 #pragma mark - Initalisation and deallocation
 
@@ -151,6 +152,7 @@
         _rotationBehavior = IIViewDeckRotationKeepsLedgeSizes;
         _viewAppeared = NO;
         _resizesCenterView = NO;
+        self.enabled = YES;
 
         self.originalShadowRadius = 0;
         self.originalShadowOffset = CGSizeZero;
@@ -687,10 +689,10 @@
 #pragma mark - Pre iOS5 message relaying
 
 - (void)relayAppearanceMethod:(void(^)(UIViewController* controller))relay {
-    BOOL mustRelay = ![self respondsToSelector:@selector(automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers)] || ![self performSelector:@selector(automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers)];
-
-    if (!mustRelay) return;
-    
+//    BOOL mustRelay = ![self respondsToSelector:@selector(automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers)] || ![self performSelector:@selector(automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers)];
+//
+//    if (!mustRelay) return;
+//    
     relay(self.centerController);
     relay(self.leftController);
     relay(self.rightController);
@@ -752,6 +754,8 @@
 }
 
 - (void)panned:(UIPanGestureRecognizer*)panner {
+    if (!_enabled) return;
+    
     CGPoint pan = [panner translationInView:self.referenceView];
     
     // restarts
