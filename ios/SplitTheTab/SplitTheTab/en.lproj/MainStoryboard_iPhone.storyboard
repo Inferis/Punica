@@ -11,23 +11,18 @@
                 <viewController id="hdo-pU-Z77" customClass="RootViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7yc-Nd-H0x">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="VyG-Ob-IRI">
-                                <rect key="frame" x="284" y="0.0" width="36" height="416"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="3wO-Nh-Y1n">
-                                <rect key="frame" x="0.0" y="0.0" width="284" height="416"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="3wO-Nh-Y1n">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="382"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="hdo-pU-Z77" id="8ze-1i-IWy"/>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="WRF-1m-9Fo">
-                                <rect key="frame" x="59" y="100" width="181" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="13" y="381" width="293" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="changePage:" destination="hdo-pU-Z77" eventType="valueChanged" id="p4a-ht-WFy"/>
@@ -39,7 +34,6 @@
                     <navigationItem key="navigationItem" title="Split The Tab" id="G2k-xI-uZI"/>
                     <connections>
                         <outlet property="pageControl" destination="WRF-1m-9Fo" id="p66-1b-QsX"/>
-                        <outlet property="pageControlHolder" destination="VyG-Ob-IRI" id="zhN-1d-QkQ"/>
                         <outlet property="pagesView" destination="3wO-Nh-Y1n" id="3kV-Z7-ssG"/>
                         <segue destination="qbJ-Hy-Nei" kind="push" id="Kcp-DH-48Y"/>
                     </connections>
@@ -84,6 +78,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0MW-ls-OyV">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="hdo-pU-Z77" kind="relationship" relationship="rootViewController" id="tqV-AK-6iV"/>
                     </connections>
