@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "CentralBillPhoneController.h"
+#import "BillListPhoneController.h"
+#import "IIViewDeckController.h"
 
 @implementation AppDelegate
 
@@ -20,8 +22,19 @@
     if (IsIPad()) {
     }
     else {
-        CentralBillPhoneController* centralBillController = [[CentralBillPhoneController alloc] initWithNibName:@"CentralBillPhoneView" bundle:nil];
-        UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:centralBillController];
+       
+        // create the left navigation controller with the bill list
+        BillListPhoneController* billListController = [[BillListPhoneController alloc] initWithNibName:@"BillListPhoneView" bundle:nil];
+        UINavigationController* listNavigationController = [[UINavigationController alloc] initWithRootViewController:billListController];
+        listNavigationController.navigationBar.tintColor = [UIColor colorWithWhite:0.200 alpha:1.000];
+        
+        // create the central bill controller in a viewdeck
+        CentralBillPhoneController* centralBillController = [[CentralBillPhoneController alloc] initWithNibName:@"CentralBillPhoneView" bundle:nil];      
+        IIViewDeckController* deckController = [[IIViewDeckController alloc] initWithCenterViewController:centralBillController leftViewController:listNavigationController];
+        deckController.navigationControllerBehavior = IIViewDeckNavigationControllerIntegrated;
+
+        // create the center navigation controller
+        UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:deckController];
         navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1.000];
         self.window.rootViewController = navigationController;
     }
