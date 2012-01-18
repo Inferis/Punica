@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CentralBillPhoneController.h"
 
 @implementation AppDelegate
 
@@ -15,9 +16,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    if (IsIPad()) {
+    }
+    else {
+        CentralBillPhoneController* centralBillController = [[CentralBillPhoneController alloc] initWithNibName:@"CentralBillPhoneView" bundle:nil];
+        UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:centralBillController];
+        navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1.000];
+        self.window.rootViewController = navigationController;
+    }
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

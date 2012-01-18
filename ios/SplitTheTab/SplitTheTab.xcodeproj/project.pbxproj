@@ -13,6 +13,8 @@
 		E22D62B614C719B9007BE25C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E22D62B414C719B9007BE25C /* InfoPlist.strings */; };
 		E22D62B814C719B9007BE25C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62B714C719B9007BE25C /* main.m */; };
 		E22D62BC14C719B9007BE25C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62BB14C719B9007BE25C /* AppDelegate.m */; };
+		E22D62CE14C720FF007BE25C /* CentralBillPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62CC14C720FF007BE25C /* CentralBillPhoneController.m */; };
+		E22D62CF14C720FF007BE25C /* CentralBillPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62CD14C720FF007BE25C /* CentralBillPhoneView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,9 @@
 		E22D62BA14C719B9007BE25C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E22D62BB14C719B9007BE25C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E22D62C614C71A4B007BE25C /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		E22D62CB14C720FF007BE25C /* CentralBillPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CentralBillPhoneController.h; sourceTree = "<group>"; };
+		E22D62CC14C720FF007BE25C /* CentralBillPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CentralBillPhoneController.m; sourceTree = "<group>"; };
+		E22D62CD14C720FF007BE25C /* CentralBillPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralBillPhoneView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,9 @@
 		E22D62C914C71B7D007BE25C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				E22D62CB14C720FF007BE25C /* CentralBillPhoneController.h */,
+				E22D62CC14C720FF007BE25C /* CentralBillPhoneController.m */,
+				E22D62CD14C720FF007BE25C /* CentralBillPhoneView.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22D62B614C719B9007BE25C /* InfoPlist.strings in Resources */,
+				E22D62CF14C720FF007BE25C /* CentralBillPhoneView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +197,7 @@
 			files = (
 				E22D62B814C719B9007BE25C /* main.m in Sources */,
 				E22D62BC14C719B9007BE25C /* AppDelegate.m in Sources */,
+				E22D62CE14C720FF007BE25C /* CentralBillPhoneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
