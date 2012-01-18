@@ -60,3 +60,10 @@ static inline BOOL IsIPad() {
 
 #define dispatch_delayed(time, block) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (time) * NSEC_PER_SEC), dispatch_get_main_queue(), (block));
 
+#define CGRectSetWidth(rect, width) ((CGRect) { (rect).origin, (width), (rect).size.height })
+#define CGRectSetHeight(rect, height) ((CGRect) { (rect).origin, (rect).size.width, (height) })
+#define CGRectSetX(rect, x) ((CGRect) { (x), (rect).origin.y, (rect).size })
+#define CGRectSetY(rect, x) ((CGRect) { (rect).origin.x, (y), (rect).size })
+#define CGRectSetOrigin(rect, origin) ((CGRect) { (origin), (rect).size })
+#define CGRectSetSize(rect, size) ((CGRect) { (rect).origin, size })
+
