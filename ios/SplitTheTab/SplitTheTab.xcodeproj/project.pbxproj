@@ -19,6 +19,12 @@
 		E22D62D714C722A9007BE25C /* WrappedController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62D514C722A9007BE25C /* WrappedController.m */; };
 		E22D62DB14C722E2007BE25C /* BillListPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62D914C722E2007BE25C /* BillListPhoneController.m */; };
 		E22D62DC14C722E2007BE25C /* BillListPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62DA14C722E2007BE25C /* BillListPhoneView.xib */; };
+		E22D62E014C732B5007BE25C /* FamilyBillPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62DE14C732B5007BE25C /* FamilyBillPhoneController.m */; };
+		E22D62E114C732B5007BE25C /* FamilyBillPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62DF14C732B5007BE25C /* FamilyBillPhoneView.xib */; };
+		E22D62E514C732DB007BE25C /* ExpenditureDetailPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62E314C732DA007BE25C /* ExpenditureDetailPhoneController.m */; };
+		E22D62E614C732DB007BE25C /* ExpenditureDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E414C732DA007BE25C /* ExpenditureDetailPhoneView.xib */; };
+		E22D62EA14C732EB007BE25C /* IncomeDetailPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */; };
+		E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,15 @@
 		E22D62D814C722E1007BE25C /* BillListPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillListPhoneController.h; sourceTree = "<group>"; };
 		E22D62D914C722E2007BE25C /* BillListPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillListPhoneController.m; sourceTree = "<group>"; };
 		E22D62DA14C722E2007BE25C /* BillListPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillListPhoneView.xib; sourceTree = "<group>"; };
+		E22D62DD14C732B5007BE25C /* FamilyBillPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyBillPhoneController.h; sourceTree = "<group>"; };
+		E22D62DE14C732B5007BE25C /* FamilyBillPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilyBillPhoneController.m; sourceTree = "<group>"; };
+		E22D62DF14C732B5007BE25C /* FamilyBillPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FamilyBillPhoneView.xib; sourceTree = "<group>"; };
+		E22D62E214C732DA007BE25C /* ExpenditureDetailPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureDetailPhoneController.h; sourceTree = "<group>"; };
+		E22D62E314C732DA007BE25C /* ExpenditureDetailPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenditureDetailPhoneController.m; sourceTree = "<group>"; };
+		E22D62E414C732DA007BE25C /* ExpenditureDetailPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenditureDetailPhoneView.xib; sourceTree = "<group>"; };
+		E22D62E714C732EB007BE25C /* IncomeDetailPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeDetailPhoneController.h; sourceTree = "<group>"; };
+		E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeDetailPhoneController.m; sourceTree = "<group>"; };
+		E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeDetailPhoneView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +151,15 @@
 				E22D62D814C722E1007BE25C /* BillListPhoneController.h */,
 				E22D62D914C722E2007BE25C /* BillListPhoneController.m */,
 				E22D62DA14C722E2007BE25C /* BillListPhoneView.xib */,
+				E22D62DD14C732B5007BE25C /* FamilyBillPhoneController.h */,
+				E22D62DE14C732B5007BE25C /* FamilyBillPhoneController.m */,
+				E22D62DF14C732B5007BE25C /* FamilyBillPhoneView.xib */,
+				E22D62E214C732DA007BE25C /* ExpenditureDetailPhoneController.h */,
+				E22D62E314C732DA007BE25C /* ExpenditureDetailPhoneController.m */,
+				E22D62E414C732DA007BE25C /* ExpenditureDetailPhoneView.xib */,
+				E22D62E714C732EB007BE25C /* IncomeDetailPhoneController.h */,
+				E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */,
+				E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -220,6 +244,9 @@
 				E22D62B614C719B9007BE25C /* InfoPlist.strings in Resources */,
 				E22D62CF14C720FF007BE25C /* CentralBillPhoneView.xib in Resources */,
 				E22D62DC14C722E2007BE25C /* BillListPhoneView.xib in Resources */,
+				E22D62E114C732B5007BE25C /* FamilyBillPhoneView.xib in Resources */,
+				E22D62E614C732DB007BE25C /* ExpenditureDetailPhoneView.xib in Resources */,
+				E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +263,9 @@
 				E22D62D614C722A9007BE25C /* IIViewDeckController.m in Sources */,
 				E22D62D714C722A9007BE25C /* WrappedController.m in Sources */,
 				E22D62DB14C722E2007BE25C /* BillListPhoneController.m in Sources */,
+				E22D62E014C732B5007BE25C /* FamilyBillPhoneController.m in Sources */,
+				E22D62E514C732DB007BE25C /* ExpenditureDetailPhoneController.m in Sources */,
+				E22D62EA14C732EB007BE25C /* IncomeDetailPhoneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
