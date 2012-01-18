@@ -7,152 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2F3B2B9146FFA170004BAD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2B8146FFA170004BAD6 /* UIKit.framework */; };
-		E2F3B2BB146FFA170004BAD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2BA146FFA170004BAD6 /* Foundation.framework */; };
-		E2F3B2BD146FFA170004BAD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2BC146FFA170004BAD6 /* CoreGraphics.framework */; };
-		E2F3B2C3146FFA170004BAD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2C1146FFA170004BAD6 /* InfoPlist.strings */; };
-		E2F3B2C5146FFA170004BAD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2C4146FFA170004BAD6 /* main.m */; };
-		E2F3B2C9146FFA170004BAD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */; };
-		E2F3B2CC146FFA170004BAD6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2CB146FFA170004BAD6 /* RootViewController.m */; };
-		E2F3B2CF146FFA170004BAD6 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2CE146FFA170004BAD6 /* DataViewController.m */; };
-		E2F3B2D2146FFA170004BAD6 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F3B2D1146FFA170004BAD6 /* ModelController.m */; };
-		E2F3B2D5146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */; };
-		E2F3B2D8146FFA170004BAD6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */; };
-		E2F3B2E014700C190004BAD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F3B2DF14700C190004BAD6 /* QuartzCore.framework */; };
-		E2F3B2E4147054350004BAD6 /* black-Linen.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2E2147054350004BAD6 /* black-Linen.png */; };
-		E2F3B2E5147054350004BAD6 /* leather_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2E3147054350004BAD6 /* leather_1.png */; };
-		E2F3B2EC147089D20004BAD6 /* pages.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2EA147089D20004BAD6 /* pages.png */; };
-		E2F3B2ED147089D20004BAD6 /* pages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F3B2EB147089D20004BAD6 /* pages@2x.png */; };
+		E22D62AC14C719B9007BE25C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22D62AB14C719B9007BE25C /* UIKit.framework */; };
+		E22D62AE14C719B9007BE25C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22D62AD14C719B9007BE25C /* Foundation.framework */; };
+		E22D62B014C719B9007BE25C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22D62AF14C719B9007BE25C /* CoreGraphics.framework */; };
+		E22D62B614C719B9007BE25C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E22D62B414C719B9007BE25C /* InfoPlist.strings */; };
+		E22D62B814C719B9007BE25C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62B714C719B9007BE25C /* main.m */; };
+		E22D62BC14C719B9007BE25C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62BB14C719B9007BE25C /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E2F3B2B4146FFA170004BAD6 /* SplitTheTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2F3B2B8146FFA170004BAD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E2F3B2BA146FFA170004BAD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E2F3B2BC146FFA170004BAD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E2F3B2C0146FFA170004BAD6 /* SplitTheTab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplitTheTab-Info.plist"; sourceTree = "<group>"; };
-		E2F3B2C2146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E2F3B2C4146FFA170004BAD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E2F3B2C6146FFA170004BAD6 /* SplitTheTab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitTheTab-Prefix.pch"; sourceTree = "<group>"; };
-		E2F3B2C7146FFA170004BAD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E2F3B2CA146FFA170004BAD6 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		E2F3B2CB146FFA170004BAD6 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		E2F3B2CD146FFA170004BAD6 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
-		E2F3B2CE146FFA170004BAD6 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
-		E2F3B2D0146FFA170004BAD6 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		E2F3B2D1146FFA170004BAD6 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
-		E2F3B2D4146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		E2F3B2D7146FFA170004BAD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E2F3B2DF14700C190004BAD6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E2F3B2E2147054350004BAD6 /* black-Linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-Linen.png"; sourceTree = "<group>"; };
-		E2F3B2E3147054350004BAD6 /* leather_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leather_1.png; sourceTree = "<group>"; };
-		E2F3B2EA147089D20004BAD6 /* pages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pages.png; sourceTree = "<group>"; };
-		E2F3B2EB147089D20004BAD6 /* pages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pages@2x.png"; sourceTree = "<group>"; };
+		E22D62A714C719B9007BE25C /* SplitTheTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22D62AB14C719B9007BE25C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E22D62AD14C719B9007BE25C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E22D62AF14C719B9007BE25C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E22D62B314C719B9007BE25C /* SplitTheTab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplitTheTab-Info.plist"; sourceTree = "<group>"; };
+		E22D62B514C719B9007BE25C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E22D62B714C719B9007BE25C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E22D62B914C719B9007BE25C /* SplitTheTab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitTheTab-Prefix.pch"; sourceTree = "<group>"; };
+		E22D62BA14C719B9007BE25C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E22D62BB14C719B9007BE25C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E2F3B2B1146FFA170004BAD6 /* Frameworks */ = {
+		E22D62A414C719B9007BE25C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F3B2E014700C190004BAD6 /* QuartzCore.framework in Frameworks */,
-				E2F3B2B9146FFA170004BAD6 /* UIKit.framework in Frameworks */,
-				E2F3B2BB146FFA170004BAD6 /* Foundation.framework in Frameworks */,
-				E2F3B2BD146FFA170004BAD6 /* CoreGraphics.framework in Frameworks */,
+				E22D62AC14C719B9007BE25C /* UIKit.framework in Frameworks */,
+				E22D62AE14C719B9007BE25C /* Foundation.framework in Frameworks */,
+				E22D62B014C719B9007BE25C /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E2F3B2A9146FFA170004BAD6 = {
+		E22D629C14C719B9007BE25C = {
 			isa = PBXGroup;
 			children = (
-				E2F3B2DF14700C190004BAD6 /* QuartzCore.framework */,
-				E2F3B2BE146FFA170004BAD6 /* SplitTheTab */,
-				E2F3B2B7146FFA170004BAD6 /* Frameworks */,
-				E2F3B2B5146FFA170004BAD6 /* Products */,
+				E22D62B114C719B9007BE25C /* SplitTheTab */,
+				E22D62AA14C719B9007BE25C /* Frameworks */,
+				E22D62A814C719B9007BE25C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E2F3B2B5146FFA170004BAD6 /* Products */ = {
+		E22D62A814C719B9007BE25C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2F3B2B4146FFA170004BAD6 /* SplitTheTab.app */,
+				E22D62A714C719B9007BE25C /* SplitTheTab.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2F3B2B7146FFA170004BAD6 /* Frameworks */ = {
+		E22D62AA14C719B9007BE25C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2F3B2B8146FFA170004BAD6 /* UIKit.framework */,
-				E2F3B2BA146FFA170004BAD6 /* Foundation.framework */,
-				E2F3B2BC146FFA170004BAD6 /* CoreGraphics.framework */,
+				E22D62AB14C719B9007BE25C /* UIKit.framework */,
+				E22D62AD14C719B9007BE25C /* Foundation.framework */,
+				E22D62AF14C719B9007BE25C /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E2F3B2BE146FFA170004BAD6 /* SplitTheTab */ = {
+		E22D62B114C719B9007BE25C /* SplitTheTab */ = {
 			isa = PBXGroup;
 			children = (
-				E2F3B2E1147054350004BAD6 /* Assets */,
-				E2F3B2DE147007F70004BAD6 /* iPhone */,
-				E2F3B2C7146FFA170004BAD6 /* AppDelegate.h */,
-				E2F3B2C8146FFA170004BAD6 /* AppDelegate.m */,
-				E2F3B2CA146FFA170004BAD6 /* RootViewController.h */,
-				E2F3B2CB146FFA170004BAD6 /* RootViewController.m */,
-				E2F3B2CD146FFA170004BAD6 /* DataViewController.h */,
-				E2F3B2CE146FFA170004BAD6 /* DataViewController.m */,
-				E2F3B2D0146FFA170004BAD6 /* ModelController.h */,
-				E2F3B2D1146FFA170004BAD6 /* ModelController.m */,
-				E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */,
-				E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */,
-				E2F3B2BF146FFA170004BAD6 /* Supporting Files */,
+				E22D62BA14C719B9007BE25C /* AppDelegate.h */,
+				E22D62BB14C719B9007BE25C /* AppDelegate.m */,
+				E22D62B214C719B9007BE25C /* Supporting Files */,
 			);
 			path = SplitTheTab;
 			sourceTree = "<group>";
 		};
-		E2F3B2BF146FFA170004BAD6 /* Supporting Files */ = {
+		E22D62B214C719B9007BE25C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E2F3B2C0146FFA170004BAD6 /* SplitTheTab-Info.plist */,
-				E2F3B2C1146FFA170004BAD6 /* InfoPlist.strings */,
-				E2F3B2C4146FFA170004BAD6 /* main.m */,
-				E2F3B2C6146FFA170004BAD6 /* SplitTheTab-Prefix.pch */,
+				E22D62B314C719B9007BE25C /* SplitTheTab-Info.plist */,
+				E22D62B414C719B9007BE25C /* InfoPlist.strings */,
+				E22D62B714C719B9007BE25C /* main.m */,
+				E22D62B914C719B9007BE25C /* SplitTheTab-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E2F3B2DE147007F70004BAD6 /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPhone;
-			sourceTree = "<group>";
-		};
-		E2F3B2E1147054350004BAD6 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				E2F3B2EA147089D20004BAD6 /* pages.png */,
-				E2F3B2EB147089D20004BAD6 /* pages@2x.png */,
-				E2F3B2E2147054350004BAD6 /* black-Linen.png */,
-				E2F3B2E3147054350004BAD6 /* leather_1.png */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E2F3B2B3146FFA170004BAD6 /* SplitTheTab */ = {
+		E22D62A614C719B9007BE25C /* SplitTheTab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2F3B2DB146FFA170004BAD6 /* Build configuration list for PBXNativeTarget "SplitTheTab" */;
+			buildConfigurationList = E22D62BF14C719B9007BE25C /* Build configuration list for PBXNativeTarget "SplitTheTab" */;
 			buildPhases = (
-				E2F3B2B0146FFA170004BAD6 /* Sources */,
-				E2F3B2B1146FFA170004BAD6 /* Frameworks */,
-				E2F3B2B2146FFA170004BAD6 /* Resources */,
+				E22D62A314C719B9007BE25C /* Sources */,
+				E22D62A414C719B9007BE25C /* Frameworks */,
+				E22D62A514C719B9007BE25C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -160,96 +107,71 @@
 			);
 			name = SplitTheTab;
 			productName = SplitTheTab;
-			productReference = E2F3B2B4146FFA170004BAD6 /* SplitTheTab.app */;
+			productReference = E22D62A714C719B9007BE25C /* SplitTheTab.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E2F3B2AB146FFA170004BAD6 /* Project object */ = {
+		E22D629E14C719B9007BE25C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Adriaenssen BVBA";
 			};
-			buildConfigurationList = E2F3B2AE146FFA170004BAD6 /* Build configuration list for PBXProject "SplitTheTab" */;
+			buildConfigurationList = E22D62A114C719B9007BE25C /* Build configuration list for PBXProject "SplitTheTab" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E2F3B2A9146FFA170004BAD6;
-			productRefGroup = E2F3B2B5146FFA170004BAD6 /* Products */;
+			mainGroup = E22D629C14C719B9007BE25C;
+			productRefGroup = E22D62A814C719B9007BE25C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E2F3B2B3146FFA170004BAD6 /* SplitTheTab */,
+				E22D62A614C719B9007BE25C /* SplitTheTab */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E2F3B2B2146FFA170004BAD6 /* Resources */ = {
+		E22D62A514C719B9007BE25C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F3B2C3146FFA170004BAD6 /* InfoPlist.strings in Resources */,
-				E2F3B2D5146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard in Resources */,
-				E2F3B2D8146FFA170004BAD6 /* MainStoryboard_iPad.storyboard in Resources */,
-				E2F3B2E4147054350004BAD6 /* black-Linen.png in Resources */,
-				E2F3B2E5147054350004BAD6 /* leather_1.png in Resources */,
-				E2F3B2EC147089D20004BAD6 /* pages.png in Resources */,
-				E2F3B2ED147089D20004BAD6 /* pages@2x.png in Resources */,
+				E22D62B614C719B9007BE25C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E2F3B2B0146FFA170004BAD6 /* Sources */ = {
+		E22D62A314C719B9007BE25C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F3B2C5146FFA170004BAD6 /* main.m in Sources */,
-				E2F3B2C9146FFA170004BAD6 /* AppDelegate.m in Sources */,
-				E2F3B2CC146FFA170004BAD6 /* RootViewController.m in Sources */,
-				E2F3B2CF146FFA170004BAD6 /* DataViewController.m in Sources */,
-				E2F3B2D2146FFA170004BAD6 /* ModelController.m in Sources */,
+				E22D62B814C719B9007BE25C /* main.m in Sources */,
+				E22D62BC14C719B9007BE25C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E2F3B2C1146FFA170004BAD6 /* InfoPlist.strings */ = {
+		E22D62B414C719B9007BE25C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E2F3B2C2146FFA170004BAD6 /* en */,
+				E22D62B514C719B9007BE25C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E2F3B2D3146FFA170004BAD6 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E2F3B2D4146FFA170004BAD6 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		E2F3B2D6146FFA170004BAD6 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E2F3B2D7146FFA170004BAD6 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E2F3B2D9146FFA170004BAD6 /* Debug */ = {
+		E22D62BD14C719B9007BE25C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -275,7 +197,7 @@
 			};
 			name = Debug;
 		};
-		E2F3B2DA146FFA170004BAD6 /* Release */ = {
+		E22D62BE14C719B9007BE25C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,7 +218,7 @@
 			};
 			name = Release;
 		};
-		E2F3B2DC146FFA170004BAD6 /* Debug */ = {
+		E22D62C014C719B9007BE25C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -307,7 +229,7 @@
 			};
 			name = Debug;
 		};
-		E2F3B2DD146FFA170004BAD6 /* Release */ = {
+		E22D62C114C719B9007BE25C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -321,24 +243,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E2F3B2AE146FFA170004BAD6 /* Build configuration list for PBXProject "SplitTheTab" */ = {
+		E22D62A114C719B9007BE25C /* Build configuration list for PBXProject "SplitTheTab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2F3B2D9146FFA170004BAD6 /* Debug */,
-				E2F3B2DA146FFA170004BAD6 /* Release */,
+				E22D62BD14C719B9007BE25C /* Debug */,
+				E22D62BE14C719B9007BE25C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2F3B2DB146FFA170004BAD6 /* Build configuration list for PBXNativeTarget "SplitTheTab" */ = {
+		E22D62BF14C719B9007BE25C /* Build configuration list for PBXNativeTarget "SplitTheTab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2F3B2DC146FFA170004BAD6 /* Debug */,
-				E2F3B2DD146FFA170004BAD6 /* Release */,
+				E22D62C014C719B9007BE25C /* Debug */,
+				E22D62C114C719B9007BE25C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E2F3B2AB146FFA170004BAD6 /* Project object */;
+	rootObject = E22D629E14C719B9007BE25C /* Project object */;
 }
