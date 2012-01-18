@@ -26,6 +26,7 @@
 		E22D62B914C719B9007BE25C /* SplitTheTab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplitTheTab-Prefix.pch"; sourceTree = "<group>"; };
 		E22D62BA14C719B9007BE25C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E22D62BB14C719B9007BE25C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E22D62C614C71A4B007BE25C /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		E22D62B214C719B9007BE25C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E22D62C614C71A4B007BE25C /* CommonMacros.h */,
 				E22D62B314C719B9007BE25C /* SplitTheTab-Info.plist */,
 				E22D62B414C719B9007BE25C /* InfoPlist.strings */,
 				E22D62B714C719B9007BE25C /* main.m */,
