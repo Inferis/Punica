@@ -15,6 +15,8 @@
 		E22D62BC14C719B9007BE25C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62BB14C719B9007BE25C /* AppDelegate.m */; };
 		E22D62CE14C720FF007BE25C /* CentralBillPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62CC14C720FF007BE25C /* CentralBillPhoneController.m */; };
 		E22D62CF14C720FF007BE25C /* CentralBillPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62CD14C720FF007BE25C /* CentralBillPhoneView.xib */; };
+		E22D62D614C722A9007BE25C /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62D314C722A9007BE25C /* IIViewDeckController.m */; };
+		E22D62D714C722A9007BE25C /* WrappedController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62D514C722A9007BE25C /* WrappedController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		E22D62CB14C720FF007BE25C /* CentralBillPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CentralBillPhoneController.h; sourceTree = "<group>"; };
 		E22D62CC14C720FF007BE25C /* CentralBillPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CentralBillPhoneController.m; sourceTree = "<group>"; };
 		E22D62CD14C720FF007BE25C /* CentralBillPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralBillPhoneView.xib; sourceTree = "<group>"; };
+		E22D62D214C722A9007BE25C /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		E22D62D314C722A9007BE25C /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		E22D62D414C722A9007BE25C /* WrappedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrappedController.h; sourceTree = "<group>"; };
+		E22D62D514C722A9007BE25C /* WrappedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrappedController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		E22D62B114C719B9007BE25C /* SplitTheTab */ = {
 			isa = PBXGroup;
 			children = (
+				E22D62D014C72282007BE25C /* Vendor */,
 				E22D62C814C71B38007BE25C /* Models */,
 				E22D62C714C71B26007BE25C /* UI */,
 				E22D62BA14C719B9007BE25C /* AppDelegate.h */,
@@ -130,6 +137,25 @@
 			children = (
 			);
 			path = iPad;
+			sourceTree = "<group>";
+		};
+		E22D62D014C72282007BE25C /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				E22D62D114C722A9007BE25C /* ViewDeck */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		E22D62D114C722A9007BE25C /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				E22D62D214C722A9007BE25C /* IIViewDeckController.h */,
+				E22D62D314C722A9007BE25C /* IIViewDeckController.m */,
+				E22D62D414C722A9007BE25C /* WrappedController.h */,
+				E22D62D514C722A9007BE25C /* WrappedController.m */,
+			);
+			path = ViewDeck;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +224,8 @@
 				E22D62B814C719B9007BE25C /* main.m in Sources */,
 				E22D62BC14C719B9007BE25C /* AppDelegate.m in Sources */,
 				E22D62CE14C720FF007BE25C /* CentralBillPhoneController.m in Sources */,
+				E22D62D614C722A9007BE25C /* IIViewDeckController.m in Sources */,
+				E22D62D714C722A9007BE25C /* WrappedController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
