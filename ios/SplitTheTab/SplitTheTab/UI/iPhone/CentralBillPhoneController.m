@@ -7,6 +7,10 @@
 //
 
 #import "CentralBillPhoneController.h"
+#import "FamilyBillPhoneController.h"
+#import "ExpenditureDetailPhoneController.h"
+#import "IncomeDetailPhoneController.h"
+#import "IIViewDeckController.h"
 
 @implementation CentralBillPhoneController
 
@@ -49,6 +53,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.viewDeckController.enabled = YES;
     [super viewWillAppear:animated];
 }
 
@@ -60,6 +65,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    self.viewDeckController.enabled = NO;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -77,16 +83,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,6 +103,15 @@
     }
     
     // Configure the cell...
+    if (indexPath.section == 0) {
+        // family cell
+        cell.textLabel.text = @"Family";
+    }
+    else {
+        cell.textLabel.text = @"Bill Line";
+    }
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -146,13 +159,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSLog(@"nav = %@", self.viewDeckController.navigationController);
+    
+    if (indexPath.section == 0) {
+        FamilyBillPhoneController *detailController = [[FamilyBillPhoneController alloc] initWithNibName:@"FamilyBillPhoneView" bundle:nil];
+        [self.viewDeckController.navigationController pushViewController:detailController animated:YES];
+    }
+    else {
+        ExpenditureDetailPhoneController *detailController = [[ExpenditureDetailPhoneController alloc] initWithNibName:@"ExpenditureDetailPhoneView" bundle:nil];
+        [self.viewDeckController.navigationController pushViewController:detailController animated:YES];
+    }
 }
 
 @end
