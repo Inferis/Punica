@@ -73,6 +73,8 @@
 		E22D62B114C719B9007BE25C /* SplitTheTab */ = {
 			isa = PBXGroup;
 			children = (
+				E22D62C814C71B38007BE25C /* Models */,
+				E22D62C714C71B26007BE25C /* UI */,
 				E22D62BA14C719B9007BE25C /* AppDelegate.h */,
 				E22D62BB14C719B9007BE25C /* AppDelegate.m */,
 				E22D62B214C719B9007BE25C /* Supporting Files */,
@@ -90,6 +92,36 @@
 				E22D62B914C719B9007BE25C /* SplitTheTab-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E22D62C714C71B26007BE25C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E22D62CA14C71B84007BE25C /* iPad */,
+				E22D62C914C71B7D007BE25C /* iPhone */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E22D62C814C71B38007BE25C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E22D62C914C71B7D007BE25C /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		E22D62CA14C71B84007BE25C /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
