@@ -32,7 +32,8 @@
         CentralBillPhoneController* centralBillController = [[CentralBillPhoneController alloc] initWithNibName:@"CentralBillPhoneView" bundle:nil];      
         IIViewDeckController* deckController = [[IIViewDeckController alloc] initWithCenterViewController:centralBillController leftViewController:listNavigationController];
         deckController.navigationControllerBehavior = IIViewDeckNavigationControllerIntegrated;
-
+        deckController.rotationBehavior = IIViewDeckRotationKeepsViewSizes;
+        deckController.leftLedge = 100;
         // create the center navigation controller
         UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:deckController];
         navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1.000];
