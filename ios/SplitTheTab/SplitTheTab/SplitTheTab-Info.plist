@@ -26,6 +26,13 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AccordAltBold.otf</string>
+		<string>AccordAltMedium.otf</string>
+		<string>AccordAltReg.otf</string>
+		<string>AccordAltThin.otf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
