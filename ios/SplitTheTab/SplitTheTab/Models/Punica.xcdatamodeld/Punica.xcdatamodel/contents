@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bill" syncable="YES">
+        <attribute name="closeDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Income" syncable="YES"/>
+    </entity>
+    <entity name="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ratio" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Expense" parentEntity="Transaction" syncable="YES">
+        <attribute name="locationLatitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLongitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" syncable="YES"/>
+    </entity>
+    <entity name="ExpensePhoto" syncable="YES"/>
+    <entity name="Family" syncable="YES">
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <relationship name="categories" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FamilyCategory" inverseName="family" inverseEntity="FamilyCategory" syncable="YES"/>
+    </entity>
+    <entity name="FamilyCategory" parentEntity="Category" syncable="YES">
+        <relationship name="family" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="categories" inverseEntity="Family" syncable="YES"/>
+    </entity>
+    <entity name="Income" parentEntity="Transaction" syncable="YES"/>
+    <entity name="Transaction" isAbstract="YES" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="what" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bill" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Family" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Expense" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Income" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="Transaction" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ExpensePhoto" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="Category" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="FamilyCategory" positionX="160" positionY="192" width="128" height="60"/>
+    </elements>
+</model>
