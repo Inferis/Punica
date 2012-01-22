@@ -25,6 +25,8 @@
 		E22D62E614C732DB007BE25C /* ExpenditureDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E414C732DA007BE25C /* ExpenditureDetailPhoneView.xib */; };
 		E22D62EA14C732EB007BE25C /* IncomeDetailPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */; };
 		E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */; };
+		E2B3124814CB7CFC00C9D713 /* centralNavigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */; };
+		E2B3124914CB7CFC00C9D713 /* leftNavigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		E22D62E714C732EB007BE25C /* IncomeDetailPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeDetailPhoneController.h; sourceTree = "<group>"; };
 		E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeDetailPhoneController.m; sourceTree = "<group>"; };
 		E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeDetailPhoneView.xib; sourceTree = "<group>"; };
+		E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centralNavigationBarBackground.png; sourceTree = "<group>"; };
+		E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNavigationBarBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		E22D62B114C719B9007BE25C /* SplitTheTab */ = {
 			isa = PBXGroup;
 			children = (
+				E2B3124514CB7CFC00C9D713 /* assets */,
 				E22D62D014C72282007BE25C /* Vendor */,
 				E22D62C814C71B38007BE25C /* Models */,
 				E22D62C714C71B26007BE25C /* UI */,
@@ -190,6 +195,15 @@
 			path = ViewDeck;
 			sourceTree = "<group>";
 		};
+		E2B3124514CB7CFC00C9D713 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */,
+				E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +261,8 @@
 				E22D62E114C732B5007BE25C /* FamilyBillPhoneView.xib in Resources */,
 				E22D62E614C732DB007BE25C /* ExpenditureDetailPhoneView.xib in Resources */,
 				E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */,
+				E2B3124814CB7CFC00C9D713 /* centralNavigationBarBackground.png in Resources */,
+				E2B3124914CB7CFC00C9D713 /* leftNavigationBarBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +352,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SplitTheTab/SplitTheTab-Prefix.pch";
 				INFOPLIST_FILE = "SplitTheTab/SplitTheTab-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -347,6 +364,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SplitTheTab/SplitTheTab-Prefix.pch";
 				INFOPLIST_FILE = "SplitTheTab/SplitTheTab-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -371,6 +389,7 @@
 				E22D62C114C719B9007BE25C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
