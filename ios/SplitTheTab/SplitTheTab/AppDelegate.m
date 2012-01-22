@@ -10,6 +10,7 @@
 #import "CentralBillPhoneController.h"
 #import "BillListPhoneController.h"
 #import "IIViewDeckController.h"
+#import "WrappedController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +23,6 @@
     if (IsIPad()) {
     }
     else {
-       
         // create the left navigation controller with the bill list
         BillListPhoneController* billListController = [[BillListPhoneController alloc] initWithNibName:@"BillListPhoneView" bundle:nil];
         UINavigationController* listNavigationController = [[UINavigationController alloc] initWithRootViewController:billListController];
@@ -36,8 +36,8 @@
         deckController.leftLedge = 100;
         // create the center navigation controller
         UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:deckController];
-        navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1.000];
-        self.window.rootViewController = navigationController;
+
+        self.window.rootViewController = [[WrappedController alloc] initWithViewController:navigationController];
     }
     
     // Override point for customization after application launch.
