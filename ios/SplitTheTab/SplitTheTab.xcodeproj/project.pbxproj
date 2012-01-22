@@ -25,6 +25,13 @@
 		E22D62E614C732DB007BE25C /* ExpenditureDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E414C732DA007BE25C /* ExpenditureDetailPhoneView.xib */; };
 		E22D62EA14C732EB007BE25C /* IncomeDetailPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */; };
 		E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */; };
+		E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC414CC169900C765BB /* AccordAltBold.otf */; };
+		E29C4FCC14CC169900C765BB /* AccordAltExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */; };
+		E29C4FCD14CC169900C765BB /* AccordAltExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */; };
+		E29C4FCE14CC169900C765BB /* AccordAltLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC714CC169900C765BB /* AccordAltLight.otf */; };
+		E29C4FCF14CC169900C765BB /* AccordAltMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC814CC169900C765BB /* AccordAltMedium.otf */; };
+		E29C4FD014CC169900C765BB /* AccordAltReg.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC914CC169900C765BB /* AccordAltReg.otf */; };
+		E29C4FD114CC169900C765BB /* AccordAltThin.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FCA14CC169900C765BB /* AccordAltThin.otf */; };
 		E2B3124814CB7CFC00C9D713 /* centralNavigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */; };
 		E2B3124914CB7CFC00C9D713 /* leftNavigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */; };
 /* End PBXBuildFile section */
@@ -60,6 +67,13 @@
 		E22D62E714C732EB007BE25C /* IncomeDetailPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeDetailPhoneController.h; sourceTree = "<group>"; };
 		E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeDetailPhoneController.m; sourceTree = "<group>"; };
 		E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeDetailPhoneView.xib; sourceTree = "<group>"; };
+		E29C4FC414CC169900C765BB /* AccordAltBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltBold.otf; sourceTree = "<group>"; };
+		E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraBold.otf; sourceTree = "<group>"; };
+		E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraLight.otf; sourceTree = "<group>"; };
+		E29C4FC714CC169900C765BB /* AccordAltLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltLight.otf; sourceTree = "<group>"; };
+		E29C4FC814CC169900C765BB /* AccordAltMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltMedium.otf; sourceTree = "<group>"; };
+		E29C4FC914CC169900C765BB /* AccordAltReg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltReg.otf; sourceTree = "<group>"; };
+		E29C4FCA14CC169900C765BB /* AccordAltThin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltThin.otf; sourceTree = "<group>"; };
 		E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centralNavigationBarBackground.png; sourceTree = "<group>"; };
 		E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNavigationBarBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,9 +209,25 @@
 			path = ViewDeck;
 			sourceTree = "<group>";
 		};
+		E29C4FC314CC169900C765BB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E29C4FC414CC169900C765BB /* AccordAltBold.otf */,
+				E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */,
+				E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */,
+				E29C4FC714CC169900C765BB /* AccordAltLight.otf */,
+				E29C4FC814CC169900C765BB /* AccordAltMedium.otf */,
+				E29C4FC914CC169900C765BB /* AccordAltReg.otf */,
+				E29C4FCA14CC169900C765BB /* AccordAltThin.otf */,
+			);
+			name = Fonts;
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		E2B3124514CB7CFC00C9D713 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				E29C4FC314CC169900C765BB /* Fonts */,
 				E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */,
 				E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */,
 			);
@@ -263,6 +293,13 @@
 				E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */,
 				E2B3124814CB7CFC00C9D713 /* centralNavigationBarBackground.png in Resources */,
 				E2B3124914CB7CFC00C9D713 /* leftNavigationBarBackground.png in Resources */,
+				E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */,
+				E29C4FCC14CC169900C765BB /* AccordAltExtraBold.otf in Resources */,
+				E29C4FCD14CC169900C765BB /* AccordAltExtraLight.otf in Resources */,
+				E29C4FCE14CC169900C765BB /* AccordAltLight.otf in Resources */,
+				E29C4FCF14CC169900C765BB /* AccordAltMedium.otf in Resources */,
+				E29C4FD014CC169900C765BB /* AccordAltReg.otf in Resources */,
+				E29C4FD114CC169900C765BB /* AccordAltThin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
