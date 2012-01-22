@@ -43,7 +43,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.viewDeckController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(todo)];
-    [self.viewDeckController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"centralNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
+//    [self.viewDeckController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"centralNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
+//    self.viewDeckController.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AccordAlternate-Bold" size:26], UITextAttributeFont, nil];
 }
 
 - (void)viewDidUnload

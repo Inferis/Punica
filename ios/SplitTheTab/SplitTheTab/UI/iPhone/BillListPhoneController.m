@@ -43,7 +43,7 @@
 
     UILabel* titleView = [[UILabel alloc] init];
     titleView.text = @"Yer Tabs";
-    titleView.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18];
+    titleView.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
     titleView.backgroundColor = [UIColor clearColor];
     titleView.shadowColor = [UIColor blackColor];
     titleView.shadowOffset = (CGSize) { 0, -1 };
@@ -57,7 +57,7 @@
                                               addButton,
                                               [[UIBarButtonItem alloc] initWithCustomView:titleView],
                                               nil];
-
+   //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"leftNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
     _originalFrame = self.navigationController.view.frame;
     
