@@ -8,6 +8,7 @@
 
 #import "BillListPhoneController.h"
 #import "IIViewDeckController.h"
+#import "CentralBillPhoneController.h"
 
 @interface BillListPhoneController () <IIViewDeckControllerDelegate> {
     CGRect _originalFrame;
@@ -40,9 +41,24 @@
 {
     [super viewDidLoad];
 
+    UILabel* titleView = [[UILabel alloc] init];
+    titleView.text = @"Yer Tabs";
+    titleView.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18];
+    titleView.backgroundColor = [UIColor clearColor];
+    titleView.shadowColor = [UIColor blackColor];
+    titleView.shadowOffset = (CGSize) { 0, -1 };
+    titleView.textColor = [UIColor whiteColor];
+    [titleView sizeToFit];
+    
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBill)];
+    //[addButton setTintColor:[UIColor colorWithRed:0.600 green:0.400 blue:0.200 alpha:1.000]];
     self.tableView.scrollsToTop = NO; // so that centerview will
-    self.title = @"Tabs";
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:
+                                              addButton,
+                                              [[UIBarButtonItem alloc] initWithCustomView:titleView],
+                                              nil];
 
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"leftNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
     _originalFrame = self.navigationController.view.frame;
     
     // Uncomment the following line to preserve selection between presentations.
@@ -79,25 +95,30 @@
     [super viewDidDisappear:animated];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+#pragma mark - Actions
+
+- (void)addBill {
+    
 }
 
 #pragma mark - viewDeck controller
 
 - (BOOL)viewDeckControllerWillOpenLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated {
-//    self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 220);
-//    [self.navigationController.view setNeedsLayout];
+    self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 220);
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController.view setNeedsLayout];
     return YES;
 }
 
 - (BOOL)viewDeckControllerWillCloseLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated {
-//    [UIView animateWithDuration:0.3 animations:^{
-//        self.navigationController.view.frame = _originalFrame;
-//        [self.navigationController.view setNeedsLayout];
-//    }];
+    //self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 220);
+    [UIView animateWithDuration:0.3 animations:^{
+        self.navigationController.view.frame = _originalFrame;
+    } completion:^(BOOL finished) {
+        self.navigationController.navigationBarHidden = YES;
+        self.navigationController.navigationBarHidden = NO;
+    }];
     
     return YES;
 }
@@ -111,7 +132,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
