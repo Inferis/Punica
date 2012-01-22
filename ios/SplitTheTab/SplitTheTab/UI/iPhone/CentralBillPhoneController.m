@@ -36,12 +36,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.title = @"Punica";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.viewDeckController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(todo)];
+    [self.viewDeckController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"centralNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewDidUnload
@@ -53,8 +55,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.viewDeckController.enabled = YES;
     [super viewWillAppear:animated];
+    self.viewDeckController.enabled = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -90,7 +92,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 4;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
