@@ -25,6 +25,22 @@
 		E22D62E614C732DB007BE25C /* ExpenditureDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E414C732DA007BE25C /* ExpenditureDetailPhoneView.xib */; };
 		E22D62EA14C732EB007BE25C /* IncomeDetailPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */; };
 		E22D62EB14C732EB007BE25C /* IncomeDetailPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */; };
+		E281CA4214CDBCF900CE881E /* _Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2314CDBCF900CE881E /* _Bill.m */; };
+		E281CA4314CDBCF900CE881E /* _Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2514CDBCF900CE881E /* _Category.m */; };
+		E281CA4414CDBCF900CE881E /* _Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2714CDBCF900CE881E /* _Expense.m */; };
+		E281CA4514CDBCF900CE881E /* _ExpensePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2914CDBCF900CE881E /* _ExpensePhoto.m */; };
+		E281CA4614CDBCF900CE881E /* _Family.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2B14CDBCF900CE881E /* _Family.m */; };
+		E281CA4714CDBCF900CE881E /* _FamilyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2D14CDBCF900CE881E /* _FamilyCategory.m */; };
+		E281CA4814CDBCF900CE881E /* _Income.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA2F14CDBCF900CE881E /* _Income.m */; };
+		E281CA4914CDBCF900CE881E /* _Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3114CDBCF900CE881E /* _Transaction.m */; };
+		E281CA4A14CDBCF900CE881E /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3314CDBCF900CE881E /* Bill.m */; };
+		E281CA4B14CDBCF900CE881E /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3514CDBCF900CE881E /* Category.m */; };
+		E281CA4C14CDBCF900CE881E /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3714CDBCF900CE881E /* Expense.m */; };
+		E281CA4D14CDBCF900CE881E /* ExpensePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3914CDBCF900CE881E /* ExpensePhoto.m */; };
+		E281CA4E14CDBCF900CE881E /* Family.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3B14CDBCF900CE881E /* Family.m */; };
+		E281CA4F14CDBCF900CE881E /* FamilyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3D14CDBCF900CE881E /* FamilyCategory.m */; };
+		E281CA5014CDBCF900CE881E /* Income.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3F14CDBCF900CE881E /* Income.m */; };
+		E281CA5114CDBCF900CE881E /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA4114CDBCF900CE881E /* Transaction.m */; };
 		E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC414CC169900C765BB /* AccordAltBold.otf */; };
 		E29C4FCC14CC169900C765BB /* AccordAltExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */; };
 		E29C4FCD14CC169900C765BB /* AccordAltExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */; };
@@ -83,6 +99,38 @@
 		E22D62E714C732EB007BE25C /* IncomeDetailPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeDetailPhoneController.h; sourceTree = "<group>"; };
 		E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeDetailPhoneController.m; sourceTree = "<group>"; };
 		E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeDetailPhoneView.xib; sourceTree = "<group>"; };
+		E281CA2214CDBCF900CE881E /* _Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Bill.h; sourceTree = "<group>"; };
+		E281CA2314CDBCF900CE881E /* _Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Bill.m; sourceTree = "<group>"; };
+		E281CA2414CDBCF900CE881E /* _Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Category.h; sourceTree = "<group>"; };
+		E281CA2514CDBCF900CE881E /* _Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Category.m; sourceTree = "<group>"; };
+		E281CA2614CDBCF900CE881E /* _Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Expense.h; sourceTree = "<group>"; };
+		E281CA2714CDBCF900CE881E /* _Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Expense.m; sourceTree = "<group>"; };
+		E281CA2814CDBCF900CE881E /* _ExpensePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ExpensePhoto.h; sourceTree = "<group>"; };
+		E281CA2914CDBCF900CE881E /* _ExpensePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ExpensePhoto.m; sourceTree = "<group>"; };
+		E281CA2A14CDBCF900CE881E /* _Family.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Family.h; sourceTree = "<group>"; };
+		E281CA2B14CDBCF900CE881E /* _Family.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Family.m; sourceTree = "<group>"; };
+		E281CA2C14CDBCF900CE881E /* _FamilyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FamilyCategory.h; sourceTree = "<group>"; };
+		E281CA2D14CDBCF900CE881E /* _FamilyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FamilyCategory.m; sourceTree = "<group>"; };
+		E281CA2E14CDBCF900CE881E /* _Income.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Income.h; sourceTree = "<group>"; };
+		E281CA2F14CDBCF900CE881E /* _Income.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Income.m; sourceTree = "<group>"; };
+		E281CA3014CDBCF900CE881E /* _Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Transaction.h; sourceTree = "<group>"; };
+		E281CA3114CDBCF900CE881E /* _Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Transaction.m; sourceTree = "<group>"; };
+		E281CA3214CDBCF900CE881E /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
+		E281CA3314CDBCF900CE881E /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
+		E281CA3414CDBCF900CE881E /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		E281CA3514CDBCF900CE881E /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		E281CA3614CDBCF900CE881E /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
+		E281CA3714CDBCF900CE881E /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
+		E281CA3814CDBCF900CE881E /* ExpensePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpensePhoto.h; sourceTree = "<group>"; };
+		E281CA3914CDBCF900CE881E /* ExpensePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensePhoto.m; sourceTree = "<group>"; };
+		E281CA3A14CDBCF900CE881E /* Family.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Family.h; sourceTree = "<group>"; };
+		E281CA3B14CDBCF900CE881E /* Family.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Family.m; sourceTree = "<group>"; };
+		E281CA3C14CDBCF900CE881E /* FamilyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyCategory.h; sourceTree = "<group>"; };
+		E281CA3D14CDBCF900CE881E /* FamilyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilyCategory.m; sourceTree = "<group>"; };
+		E281CA3E14CDBCF900CE881E /* Income.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Income.h; sourceTree = "<group>"; };
+		E281CA3F14CDBCF900CE881E /* Income.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Income.m; sourceTree = "<group>"; };
+		E281CA4014CDBCF900CE881E /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		E281CA4114CDBCF900CE881E /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		E29C4FC414CC169900C765BB /* AccordAltBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltBold.otf; sourceTree = "<group>"; };
 		E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraBold.otf; sourceTree = "<group>"; };
 		E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraLight.otf; sourceTree = "<group>"; };
@@ -207,6 +255,38 @@
 		E22D62C814C71B38007BE25C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E281CA2214CDBCF900CE881E /* _Bill.h */,
+				E281CA2314CDBCF900CE881E /* _Bill.m */,
+				E281CA2414CDBCF900CE881E /* _Category.h */,
+				E281CA2514CDBCF900CE881E /* _Category.m */,
+				E281CA2614CDBCF900CE881E /* _Expense.h */,
+				E281CA2714CDBCF900CE881E /* _Expense.m */,
+				E281CA2814CDBCF900CE881E /* _ExpensePhoto.h */,
+				E281CA2914CDBCF900CE881E /* _ExpensePhoto.m */,
+				E281CA2A14CDBCF900CE881E /* _Family.h */,
+				E281CA2B14CDBCF900CE881E /* _Family.m */,
+				E281CA2C14CDBCF900CE881E /* _FamilyCategory.h */,
+				E281CA2D14CDBCF900CE881E /* _FamilyCategory.m */,
+				E281CA2E14CDBCF900CE881E /* _Income.h */,
+				E281CA2F14CDBCF900CE881E /* _Income.m */,
+				E281CA3014CDBCF900CE881E /* _Transaction.h */,
+				E281CA3114CDBCF900CE881E /* _Transaction.m */,
+				E281CA3214CDBCF900CE881E /* Bill.h */,
+				E281CA3314CDBCF900CE881E /* Bill.m */,
+				E281CA3414CDBCF900CE881E /* Category.h */,
+				E281CA3514CDBCF900CE881E /* Category.m */,
+				E281CA3614CDBCF900CE881E /* Expense.h */,
+				E281CA3714CDBCF900CE881E /* Expense.m */,
+				E281CA3814CDBCF900CE881E /* ExpensePhoto.h */,
+				E281CA3914CDBCF900CE881E /* ExpensePhoto.m */,
+				E281CA3A14CDBCF900CE881E /* Family.h */,
+				E281CA3B14CDBCF900CE881E /* Family.m */,
+				E281CA3C14CDBCF900CE881E /* FamilyCategory.h */,
+				E281CA3D14CDBCF900CE881E /* FamilyCategory.m */,
+				E281CA3E14CDBCF900CE881E /* Income.h */,
+				E281CA3F14CDBCF900CE881E /* Income.m */,
+				E281CA4014CDBCF900CE881E /* Transaction.h */,
+				E281CA4114CDBCF900CE881E /* Transaction.m */,
 				E29C4FD214CC18C000C765BB /* Punica.xcdatamodeld */,
 			);
 			path = Models;
@@ -439,6 +519,22 @@
 				E29C500114CCDBA400C765BB /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				E29C500214CCDBA400C765BB /* MagicalRecordHelpers.m in Sources */,
 				E29C500314CCDBA400C765BB /* MRCoreDataAction.m in Sources */,
+				E281CA4214CDBCF900CE881E /* _Bill.m in Sources */,
+				E281CA4314CDBCF900CE881E /* _Category.m in Sources */,
+				E281CA4414CDBCF900CE881E /* _Expense.m in Sources */,
+				E281CA4514CDBCF900CE881E /* _ExpensePhoto.m in Sources */,
+				E281CA4614CDBCF900CE881E /* _Family.m in Sources */,
+				E281CA4714CDBCF900CE881E /* _FamilyCategory.m in Sources */,
+				E281CA4814CDBCF900CE881E /* _Income.m in Sources */,
+				E281CA4914CDBCF900CE881E /* _Transaction.m in Sources */,
+				E281CA4A14CDBCF900CE881E /* Bill.m in Sources */,
+				E281CA4B14CDBCF900CE881E /* Category.m in Sources */,
+				E281CA4C14CDBCF900CE881E /* Expense.m in Sources */,
+				E281CA4D14CDBCF900CE881E /* ExpensePhoto.m in Sources */,
+				E281CA4E14CDBCF900CE881E /* Family.m in Sources */,
+				E281CA4F14CDBCF900CE881E /* FamilyCategory.m in Sources */,
+				E281CA5014CDBCF900CE881E /* Income.m in Sources */,
+				E281CA5114CDBCF900CE881E /* Transaction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MagicalRecordHelpers setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Punica"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     if (IsIPad()) {
@@ -84,6 +86,7 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+    [MagicalRecordHelpers cleanUp];
 }
 
 @end
