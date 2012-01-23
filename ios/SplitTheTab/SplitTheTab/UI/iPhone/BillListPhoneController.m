@@ -9,6 +9,7 @@
 #import "BillListPhoneController.h"
 #import "IIViewDeckController.h"
 #import "CentralBillPhoneController.h"
+#import "SettingsPhoneController.h"
 
 @interface BillListPhoneController () <IIViewDeckControllerDelegate> {
     CGRect _originalFrame;
@@ -87,6 +88,11 @@
 
 - (IBAction)settingsPressed {
     
+    SettingsPhoneController* settingsController = [[SettingsPhoneController alloc] initWithNibName:@"SettingsPhoneView" bundle:nil];
+
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:settingsController];
+    navController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self.viewDeckController presentModalViewController:navController animated:YES];
 }
 
 - (void)addBill {
