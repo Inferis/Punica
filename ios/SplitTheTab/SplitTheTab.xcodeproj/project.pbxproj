@@ -41,6 +41,8 @@
 		E281CA4F14CDBCF900CE881E /* FamilyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3D14CDBCF900CE881E /* FamilyCategory.m */; };
 		E281CA5014CDBCF900CE881E /* Income.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA3F14CDBCF900CE881E /* Income.m */; };
 		E281CA5114CDBCF900CE881E /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA4114CDBCF900CE881E /* Transaction.m */; };
+		E281CA5614CDC5F300CE881E /* SettingsPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA5414CDC5F300CE881E /* SettingsPhoneController.m */; };
+		E281CA5714CDC5F300CE881E /* SettingsPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E281CA5514CDC5F300CE881E /* SettingsPhoneView.xib */; };
 		E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC414CC169900C765BB /* AccordAltBold.otf */; };
 		E29C4FCC14CC169900C765BB /* AccordAltExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */; };
 		E29C4FCD14CC169900C765BB /* AccordAltExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */; };
@@ -131,6 +133,9 @@
 		E281CA3F14CDBCF900CE881E /* Income.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Income.m; sourceTree = "<group>"; };
 		E281CA4014CDBCF900CE881E /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		E281CA4114CDBCF900CE881E /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		E281CA5314CDC5F300CE881E /* SettingsPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPhoneController.h; sourceTree = "<group>"; };
+		E281CA5414CDC5F300CE881E /* SettingsPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPhoneController.m; sourceTree = "<group>"; };
+		E281CA5514CDC5F300CE881E /* SettingsPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPhoneView.xib; sourceTree = "<group>"; };
 		E29C4FC414CC169900C765BB /* AccordAltBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltBold.otf; sourceTree = "<group>"; };
 		E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraBold.otf; sourceTree = "<group>"; };
 		E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraLight.otf; sourceTree = "<group>"; };
@@ -310,6 +315,9 @@
 				E22D62E714C732EB007BE25C /* IncomeDetailPhoneController.h */,
 				E22D62E814C732EB007BE25C /* IncomeDetailPhoneController.m */,
 				E22D62E914C732EB007BE25C /* IncomeDetailPhoneView.xib */,
+				E281CA5314CDC5F300CE881E /* SettingsPhoneController.h */,
+				E281CA5414CDC5F300CE881E /* SettingsPhoneController.m */,
+				E281CA5514CDC5F300CE881E /* SettingsPhoneView.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -485,6 +493,7 @@
 				E29C4FCF14CC169900C765BB /* AccordAltMedium.otf in Resources */,
 				E29C4FD014CC169900C765BB /* AccordAltReg.otf in Resources */,
 				E29C4FD114CC169900C765BB /* AccordAltThin.otf in Resources */,
+				E281CA5714CDC5F300CE881E /* SettingsPhoneView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +544,7 @@
 				E281CA4F14CDBCF900CE881E /* FamilyCategory.m in Sources */,
 				E281CA5014CDBCF900CE881E /* Income.m in Sources */,
 				E281CA5114CDBCF900CE881E /* Transaction.m in Sources */,
+				E281CA5614CDC5F300CE881E /* SettingsPhoneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
