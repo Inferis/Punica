@@ -14,26 +14,16 @@
     CGRect _originalFrame;
 }
 
+@property (nonatomic, strong) NSArray* bills;
+
+- (void)setupNavigationBar;
+
 @end
 
 @implementation BillListPhoneController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
+@synthesize bills = _bills;
+@synthesize tableView = _tableView;
 
 #pragma mark - View lifecycle
 
@@ -41,38 +31,13 @@
 {
     [super viewDidLoad];
 
-    UILabel* titleView = [[UILabel alloc] init];
-    titleView.text = @"Yer Tabs";
-    titleView.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
-    titleView.backgroundColor = [UIColor clearColor];
-    titleView.shadowColor = [UIColor blackColor];
-    titleView.shadowOffset = (CGSize) { 0, -1 };
-    titleView.textColor = [UIColor whiteColor];
-    [titleView sizeToFit];
-    
-    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBill)];
-    //[addButton setTintColor:[UIColor colorWithRed:0.600 green:0.400 blue:0.200 alpha:1.000]];
-    self.tableView.scrollsToTop = NO; // so that centerview will
-    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:
-                                              addButton,
-                                              [[UIBarButtonItem alloc] initWithCustomView:titleView],
-                                              nil];
-   //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"leftNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
+    [self setupNavigationBar];
     _originalFrame = self.navigationController.view.frame;
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -95,7 +60,34 @@
     [super viewDidDisappear:animated];
 }
 
+#pragma mark - UI Helpers
+
+- (void)setupNavigationBar {
+    UILabel* titleView = [[UILabel alloc] init];
+    titleView.text = @"Yer Tabs";
+    titleView.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+    titleView.backgroundColor = [UIColor clearColor];
+    titleView.shadowColor = [UIColor blackColor];
+    titleView.shadowOffset = (CGSize) { 0, -1 };
+    titleView.textColor = [UIColor whiteColor];
+    [titleView sizeToFit];
+    
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBill)];
+    //[addButton setTintColor:[UIColor colorWithRed:0.600 green:0.400 blue:0.200 alpha:1.000]];
+    self.tableView.scrollsToTop = NO; // so that centerview will
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:
+                                              addButton,
+                                              [[UIBarButtonItem alloc] initWithCustomView:titleView],
+                                              nil];
+    //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"leftNavigationBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
+}
+
 #pragma mark - Actions
+
+- (IBAction)settingsPressed {
+    
+}
 
 - (void)addBill {
     

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BillListPhoneController : UITableViewController
+@interface BillListPhoneController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView* tableView;
+
+- (IBAction)settingsPressed;
 
 @end
