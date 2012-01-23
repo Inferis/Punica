@@ -5,7 +5,9 @@
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Income" syncable="YES"/>
+        <relationship name="expenses" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="incomes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Income" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="transactions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Category" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,11 +18,10 @@
         <attribute name="locationLongitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" syncable="YES"/>
     </entity>
     <entity name="ExpensePhoto" syncable="YES"/>
     <entity name="Family" syncable="YES">
-        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="categories" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FamilyCategory" inverseName="family" inverseEntity="FamilyCategory" syncable="YES"/>
     </entity>
     <entity name="FamilyCategory" parentEntity="Category" syncable="YES">
@@ -32,12 +33,12 @@
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="transactionDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="what" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" syncable="YES"/>
+        <relationship name="bill" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="expenses" inverseEntity="Bill" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Bill" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Bill" positionX="160" positionY="192" width="128" height="150"/>
         <element name="Family" positionX="160" positionY="192" width="128" height="75"/>
-        <element name="Expense" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Expense" positionX="160" positionY="192" width="128" height="105"/>
         <element name="Income" positionX="160" positionY="192" width="128" height="45"/>
         <element name="Transaction" positionX="160" positionY="192" width="128" height="120"/>
         <element name="ExpensePhoto" positionX="160" positionY="192" width="128" height="45"/>
