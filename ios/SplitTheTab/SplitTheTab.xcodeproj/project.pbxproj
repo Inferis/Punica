@@ -43,6 +43,10 @@
 		E281CA5114CDBCF900CE881E /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA4114CDBCF900CE881E /* Transaction.m */; };
 		E281CA5614CDC5F300CE881E /* SettingsPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E281CA5414CDC5F300CE881E /* SettingsPhoneController.m */; };
 		E281CA5714CDC5F300CE881E /* SettingsPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E281CA5514CDC5F300CE881E /* SettingsPhoneView.xib */; };
+		E291959F14D215DD00E5A7FF /* Bill_H.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959B14D215DD00E5A7FF /* Bill_H.png */; };
+		E29195A014D215DD00E5A7FF /* Bill_H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959C14D215DD00E5A7FF /* Bill_H@2x.png */; };
+		E29195A114D215DD00E5A7FF /* Bill_N.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959D14D215DD00E5A7FF /* Bill_N.png */; };
+		E29195A214D215DD00E5A7FF /* Bill_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959E14D215DD00E5A7FF /* Bill_N@2x.png */; };
 		E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC414CC169900C765BB /* AccordAltBold.otf */; };
 		E29C4FCC14CC169900C765BB /* AccordAltExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */; };
 		E29C4FCD14CC169900C765BB /* AccordAltExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */; };
@@ -136,6 +140,10 @@
 		E281CA5314CDC5F300CE881E /* SettingsPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPhoneController.h; sourceTree = "<group>"; };
 		E281CA5414CDC5F300CE881E /* SettingsPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPhoneController.m; sourceTree = "<group>"; };
 		E281CA5514CDC5F300CE881E /* SettingsPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPhoneView.xib; sourceTree = "<group>"; };
+		E291959B14D215DD00E5A7FF /* Bill_H.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bill_H.png; sourceTree = "<group>"; };
+		E291959C14D215DD00E5A7FF /* Bill_H@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bill_H@2x.png"; sourceTree = "<group>"; };
+		E291959D14D215DD00E5A7FF /* Bill_N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bill_N.png; sourceTree = "<group>"; };
+		E291959E14D215DD00E5A7FF /* Bill_N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bill_N@2x.png"; sourceTree = "<group>"; };
 		E29C4FC414CC169900C765BB /* AccordAltBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltBold.otf; sourceTree = "<group>"; };
 		E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraBold.otf; sourceTree = "<group>"; };
 		E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraLight.otf; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 		E22D62C914C71B7D007BE25C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				E29195A414D218B100E5A7FF /* Cells */,
 				E22D62CB14C720FF007BE25C /* CentralBillPhoneController.h */,
 				E22D62CC14C720FF007BE25C /* CentralBillPhoneController.m */,
 				E22D62CD14C720FF007BE25C /* CentralBillPhoneView.xib */,
@@ -347,6 +356,13 @@
 				E22D62D514C722A9007BE25C /* WrappedController.m */,
 			);
 			path = ViewDeck;
+			sourceTree = "<group>";
+		};
+		E29195A414D218B100E5A7FF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		E29C4FC314CC169900C765BB /* Fonts */ = {
@@ -420,6 +436,10 @@
 		E2B3124514CB7CFC00C9D713 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				E291959B14D215DD00E5A7FF /* Bill_H.png */,
+				E291959C14D215DD00E5A7FF /* Bill_H@2x.png */,
+				E291959D14D215DD00E5A7FF /* Bill_N.png */,
+				E291959E14D215DD00E5A7FF /* Bill_N@2x.png */,
 				E29C4FC314CC169900C765BB /* Fonts */,
 				E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */,
 				E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */,
@@ -494,6 +514,10 @@
 				E29C4FD014CC169900C765BB /* AccordAltReg.otf in Resources */,
 				E29C4FD114CC169900C765BB /* AccordAltThin.otf in Resources */,
 				E281CA5714CDC5F300CE881E /* SettingsPhoneView.xib in Resources */,
+				E291959F14D215DD00E5A7FF /* Bill_H.png in Resources */,
+				E29195A014D215DD00E5A7FF /* Bill_H@2x.png in Resources */,
+				E29195A114D215DD00E5A7FF /* Bill_N.png in Resources */,
+				E29195A214D215DD00E5A7FF /* Bill_N@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
