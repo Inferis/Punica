@@ -102,7 +102,7 @@
 #pragma mark - viewDeck controller
 
 - (BOOL)viewDeckControllerWillOpenLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated {
-    self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 220);
+    self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 276);
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController.view setNeedsLayout];
@@ -110,7 +110,6 @@
 }
 
 - (BOOL)viewDeckControllerWillCloseLeftView:(IIViewDeckController *)viewDeckController animated:(BOOL)animated {
-    //self.navigationController.view.frame = CGRectSetWidth(self.navigationController.view.frame, 220);
     [UIView animateWithDuration:0.3 animations:^{
         self.navigationController.view.frame = _originalFrame;
     } completion:^(BOOL finished) {
@@ -130,7 +129,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return self.bills.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -139,11 +138,16 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+    
     // Configure the cell...
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; 
+    cell.imageView.image = [UIImage imageNamed:@"Bill_N.png"];
+    cell.imageView.highlightedImage = [UIImage imageNamed:@"Bill_H.png"];
+    cell.textLabel.text = @"Le Pal sept 2011";
+    cell.detailTextLabel.text = @"11/09/2011 - 18/09/2011";
     
     return cell;
 }
