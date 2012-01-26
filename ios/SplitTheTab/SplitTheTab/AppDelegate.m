@@ -35,7 +35,7 @@
         IIViewDeckController* deckController = [[IIViewDeckController alloc] initWithCenterViewController:centralBillController leftViewController:listNavigationController];
         deckController.navigationControllerBehavior = IIViewDeckNavigationControllerIntegrated;
         deckController.rotationBehavior = IIViewDeckRotationKeepsViewSizes;
-        deckController.leftLedge = 100;
+        deckController.leftLedge = 44;
         // create the center navigation controller
         UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:deckController];
 
