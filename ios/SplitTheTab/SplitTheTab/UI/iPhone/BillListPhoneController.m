@@ -10,6 +10,7 @@
 #import "IIViewDeckController.h"
 #import "CentralBillPhoneController.h"
 #import "SettingsPhoneController.h"
+#import "BillListCell.h"
 
 @interface BillListPhoneController () <IIViewDeckControllerDelegate> {
     CGRect _originalFrame;
@@ -134,20 +135,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"BillListCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BillListCell *cell = (BillListCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[BillListCell alloc] initWithReuseIdentifier:CellIdentifier];
     }
     
-    
-    // Configure the cell...
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; 
-    cell.imageView.image = [UIImage imageNamed:@"Bill_N.png"];
-    cell.imageView.highlightedImage = [UIImage imageNamed:@"Bill_H.png"];
-    cell.textLabel.text = @"Le Pal sept 2011";
-    cell.detailTextLabel.text = @"11/09/2011 - 18/09/2011";
+    [cell apply:[self.bills objectAtIndex:indexPath.row]];
     
     return cell;
 }
