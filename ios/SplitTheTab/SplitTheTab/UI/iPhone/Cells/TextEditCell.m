@@ -26,4 +26,8 @@
     // Configure the view for the selected state
 }
 
+- (void)apply:(NSString *)text {
+    self.textLabel.text = text;
+}
+
 @end

@@ -10,4 +10,6 @@
 
 @interface TextEditCell : UITableViewCell
 
+- (void)apply:(NSString*)text;
+
 @end
