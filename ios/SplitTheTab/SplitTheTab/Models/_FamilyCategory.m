@@ -29,9 +29,39 @@
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
+	if ([key isEqualToString:@"memberCountValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"memberCount"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
 
 	return keyPaths;
 }
+
+
+
+
+@dynamic memberCount;
+
+
+
+- (int)memberCountValue {
+	NSNumber *result = [self memberCount];
+	return [result intValue];
+}
+
+- (void)setMemberCountValue:(int)value_ {
+	[self setMemberCount:[NSNumber numberWithInt:value_]];
+}
+
+- (int)primitiveMemberCountValue {
+	NSNumber *result = [self primitiveMemberCount];
+	return [result intValue];
+}
+
+- (void)setPrimitiveMemberCountValue:(int)value_ {
+	[self setPrimitiveMemberCount:[NSNumber numberWithInt:value_]];
+}
+
 
 
 

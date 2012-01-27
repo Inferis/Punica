@@ -7,6 +7,7 @@
 @class Family;
 
 
+
 @interface FamilyCategoryID : NSManagedObjectID {}
 @end
 
@@ -15,6 +16,18 @@
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (FamilyCategoryID*)objectID;
+
+
+
+
+@property (nonatomic, retain) NSNumber *memberCount;
+
+
+@property int memberCountValue;
+- (int)memberCountValue;
+- (void)setMemberCountValue:(int)value_;
+
+//- (BOOL)validateMemberCount:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -34,6 +47,15 @@
 @end
 
 @interface _FamilyCategory (CoreDataGeneratedPrimitiveAccessors)
+
+
+- (NSNumber*)primitiveMemberCount;
+- (void)setPrimitiveMemberCount:(NSNumber*)value;
+
+- (int)primitiveMemberCountValue;
+- (void)setPrimitiveMemberCountValue:(int)value_;
+
+
 
 
 

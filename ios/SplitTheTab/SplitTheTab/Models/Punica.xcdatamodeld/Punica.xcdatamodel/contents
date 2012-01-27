@@ -31,6 +31,7 @@
         <relationship name="categories" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="FamilyCategory" inverseName="family" inverseEntity="FamilyCategory" syncable="YES"/>
     </entity>
     <entity name="FamilyCategory" representedClassName="FamilyCategory" parentEntity="Category" syncable="YES">
+        <attribute name="memberCount" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="family" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="categories" inverseEntity="Family" syncable="YES"/>
     </entity>
     <entity name="Income" representedClassName="Income" parentEntity="Transaction" syncable="YES"/>
@@ -42,12 +43,12 @@
         <relationship name="bill" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="expenses" inverseEntity="Bill" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Bill" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Bill" positionX="160" positionY="192" width="128" height="150"/>
         <element name="Category" positionX="160" positionY="192" width="128" height="75"/>
         <element name="Expense" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="ExpensePhoto" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Family" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="FamilyCategory" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="ExpensePhoto" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="Family" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="FamilyCategory" positionX="160" positionY="192" width="128" height="75"/>
         <element name="Income" positionX="160" positionY="192" width="128" height="45"/>
         <element name="Transaction" positionX="160" positionY="192" width="128" height="120"/>
     </elements>
