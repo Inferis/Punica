@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Family;
+
 @interface FamilyCell : UITableViewCell
+
+- (void)apply:(Family*)family;
 
 @end
