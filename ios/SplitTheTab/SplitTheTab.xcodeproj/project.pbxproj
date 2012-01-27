@@ -48,6 +48,8 @@
 		E29195A114D215DD00E5A7FF /* Bill_N.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959D14D215DD00E5A7FF /* Bill_N.png */; };
 		E29195A214D215DD00E5A7FF /* Bill_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959E14D215DD00E5A7FF /* Bill_N@2x.png */; };
 		E29195A714D2190F00E5A7FF /* BillListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29195A614D2190F00E5A7FF /* BillListCell.m */; };
+		E29195AB14D2220200E5A7FF /* EditBillPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29195A914D2220000E5A7FF /* EditBillPhoneController.m */; };
+		E29195AC14D2220200E5A7FF /* EditBillPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29195AA14D2220100E5A7FF /* EditBillPhoneView.xib */; };
 		E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC414CC169900C765BB /* AccordAltBold.otf */; };
 		E29C4FCC14CC169900C765BB /* AccordAltExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */; };
 		E29C4FCD14CC169900C765BB /* AccordAltExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */; };
@@ -147,6 +149,9 @@
 		E291959E14D215DD00E5A7FF /* Bill_N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bill_N@2x.png"; sourceTree = "<group>"; };
 		E29195A514D2190F00E5A7FF /* BillListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillListCell.h; sourceTree = "<group>"; };
 		E29195A614D2190F00E5A7FF /* BillListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillListCell.m; sourceTree = "<group>"; };
+		E29195A814D221FF00E5A7FF /* EditBillPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditBillPhoneController.h; sourceTree = "<group>"; };
+		E29195A914D2220000E5A7FF /* EditBillPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditBillPhoneController.m; sourceTree = "<group>"; };
+		E29195AA14D2220100E5A7FF /* EditBillPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditBillPhoneView.xib; sourceTree = "<group>"; };
 		E29C4FC414CC169900C765BB /* AccordAltBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltBold.otf; sourceTree = "<group>"; };
 		E29C4FC514CC169900C765BB /* AccordAltExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraBold.otf; sourceTree = "<group>"; };
 		E29C4FC614CC169900C765BB /* AccordAltExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AccordAltExtraLight.otf; sourceTree = "<group>"; };
@@ -330,6 +335,9 @@
 				E281CA5314CDC5F300CE881E /* SettingsPhoneController.h */,
 				E281CA5414CDC5F300CE881E /* SettingsPhoneController.m */,
 				E281CA5514CDC5F300CE881E /* SettingsPhoneView.xib */,
+				E29195A814D221FF00E5A7FF /* EditBillPhoneController.h */,
+				E29195A914D2220000E5A7FF /* EditBillPhoneController.m */,
+				E29195AA14D2220100E5A7FF /* EditBillPhoneView.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -523,6 +531,7 @@
 				E29195A014D215DD00E5A7FF /* Bill_H@2x.png in Resources */,
 				E29195A114D215DD00E5A7FF /* Bill_N.png in Resources */,
 				E29195A214D215DD00E5A7FF /* Bill_N@2x.png in Resources */,
+				E29195AC14D2220200E5A7FF /* EditBillPhoneView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +584,7 @@
 				E281CA5114CDBCF900CE881E /* Transaction.m in Sources */,
 				E281CA5614CDC5F300CE881E /* SettingsPhoneController.m in Sources */,
 				E29195A714D2190F00E5A7FF /* BillListCell.m in Sources */,
+				E29195AB14D2220200E5A7FF /* EditBillPhoneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
