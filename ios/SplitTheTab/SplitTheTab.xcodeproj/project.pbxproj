@@ -47,7 +47,6 @@
 		E29195A014D215DD00E5A7FF /* Bill_H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959C14D215DD00E5A7FF /* Bill_H@2x.png */; };
 		E29195A114D215DD00E5A7FF /* Bill_N.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959D14D215DD00E5A7FF /* Bill_N.png */; };
 		E29195A214D215DD00E5A7FF /* Bill_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E291959E14D215DD00E5A7FF /* Bill_N@2x.png */; };
-		E29195A714D2190F00E5A7FF /* BillListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29195A614D2190F00E5A7FF /* BillListCell.m */; };
 		E29195AB14D2220200E5A7FF /* EditBillPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29195A914D2220000E5A7FF /* EditBillPhoneController.m */; };
 		E29195AC14D2220200E5A7FF /* EditBillPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29195AA14D2220100E5A7FF /* EditBillPhoneView.xib */; };
 		E29C4FCB14CC169900C765BB /* AccordAltBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E29C4FC414CC169900C765BB /* AccordAltBold.otf */; };
@@ -75,6 +74,10 @@
 		E29C500514CCDC9900C765BB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29C500414CCDC9900C765BB /* CoreData.framework */; };
 		E2B3124814CB7CFC00C9D713 /* centralNavigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */; };
 		E2B3124914CB7CFC00C9D713 /* leftNavigationBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */; };
+		E2FCFEF214D2A83600B7E708 /* BillListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FCFEEF14D2A83600B7E708 /* BillListCell.m */; };
+		E2FCFEF314D2A83600B7E708 /* TextEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FCFEF114D2A83600B7E708 /* TextEditCell.m */; };
+		E2FCFEF614D2A87500B7E708 /* FamilyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FCFEF514D2A87500B7E708 /* FamilyCell.m */; };
+		E2FCFEF914D2A88500B7E708 /* FamilyButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FCFEF814D2A88400B7E708 /* FamilyButtonsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,8 +150,6 @@
 		E291959C14D215DD00E5A7FF /* Bill_H@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bill_H@2x.png"; sourceTree = "<group>"; };
 		E291959D14D215DD00E5A7FF /* Bill_N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bill_N.png; sourceTree = "<group>"; };
 		E291959E14D215DD00E5A7FF /* Bill_N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bill_N@2x.png"; sourceTree = "<group>"; };
-		E29195A514D2190F00E5A7FF /* BillListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillListCell.h; sourceTree = "<group>"; };
-		E29195A614D2190F00E5A7FF /* BillListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillListCell.m; sourceTree = "<group>"; };
 		E29195A814D221FF00E5A7FF /* EditBillPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditBillPhoneController.h; sourceTree = "<group>"; };
 		E29195A914D2220000E5A7FF /* EditBillPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditBillPhoneController.m; sourceTree = "<group>"; };
 		E29195AA14D2220100E5A7FF /* EditBillPhoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditBillPhoneView.xib; sourceTree = "<group>"; };
@@ -193,6 +194,14 @@
 		E29C500414CCDC9900C765BB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E2B3124614CB7CFC00C9D713 /* centralNavigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centralNavigationBarBackground.png; sourceTree = "<group>"; };
 		E2B3124714CB7CFC00C9D713 /* leftNavigationBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNavigationBarBackground.png; sourceTree = "<group>"; };
+		E2FCFEEE14D2A83600B7E708 /* BillListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillListCell.h; sourceTree = "<group>"; };
+		E2FCFEEF14D2A83600B7E708 /* BillListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillListCell.m; sourceTree = "<group>"; };
+		E2FCFEF014D2A83600B7E708 /* TextEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditCell.h; sourceTree = "<group>"; };
+		E2FCFEF114D2A83600B7E708 /* TextEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditCell.m; sourceTree = "<group>"; };
+		E2FCFEF414D2A87500B7E708 /* FamilyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyCell.h; sourceTree = "<group>"; };
+		E2FCFEF514D2A87500B7E708 /* FamilyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilyCell.m; sourceTree = "<group>"; };
+		E2FCFEF714D2A88400B7E708 /* FamilyButtonsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilyButtonsCell.h; sourceTree = "<group>"; };
+		E2FCFEF814D2A88400B7E708 /* FamilyButtonsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilyButtonsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,10 +381,16 @@
 		E29195A414D218B100E5A7FF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E29195A514D2190F00E5A7FF /* BillListCell.h */,
-				E29195A614D2190F00E5A7FF /* BillListCell.m */,
+				E2FCFEEE14D2A83600B7E708 /* BillListCell.h */,
+				E2FCFEEF14D2A83600B7E708 /* BillListCell.m */,
+				E2FCFEF014D2A83600B7E708 /* TextEditCell.h */,
+				E2FCFEF114D2A83600B7E708 /* TextEditCell.m */,
+				E2FCFEF414D2A87500B7E708 /* FamilyCell.h */,
+				E2FCFEF514D2A87500B7E708 /* FamilyCell.m */,
+				E2FCFEF714D2A88400B7E708 /* FamilyButtonsCell.h */,
+				E2FCFEF814D2A88400B7E708 /* FamilyButtonsCell.m */,
 			);
-			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E29C4FC314CC169900C765BB /* Fonts */ = {
@@ -583,8 +598,11 @@
 				E281CA5014CDBCF900CE881E /* Income.m in Sources */,
 				E281CA5114CDBCF900CE881E /* Transaction.m in Sources */,
 				E281CA5614CDC5F300CE881E /* SettingsPhoneController.m in Sources */,
-				E29195A714D2190F00E5A7FF /* BillListCell.m in Sources */,
 				E29195AB14D2220200E5A7FF /* EditBillPhoneController.m in Sources */,
+				E2FCFEF214D2A83600B7E708 /* BillListCell.m in Sources */,
+				E2FCFEF314D2A83600B7E708 /* TextEditCell.m in Sources */,
+				E2FCFEF614D2A87500B7E708 /* FamilyCell.m in Sources */,
+				E2FCFEF914D2A88500B7E708 /* FamilyButtonsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
