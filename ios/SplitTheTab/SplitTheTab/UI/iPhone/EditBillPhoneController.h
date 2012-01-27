@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Bill.h"
 
 @interface EditBillPhoneController : UITableViewController
+
+@property (nonatomic, retain) Bill* bill;
 
 @end

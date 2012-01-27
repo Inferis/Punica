@@ -7,8 +7,17 @@
 //
 
 #import "EditBillPhoneController.h"
+#import "Family.h"
+#import "TextEditCell.h"
+#import "FamilyCell.h"
+#import "FamilyButtonsCell.h"
+
+@interface EditBillPhoneController () <FamilyButtonsCellDelegate>
+@end
 
 @implementation EditBillPhoneController
+
+@synthesize bill = _bill;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,6 +53,13 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)didSelectAddFamily {
+    
+}
+
+- (void)didSelectCategorySettings {
+    
+}
 
 #pragma mark - Table view data source
 
@@ -54,24 +70,38 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return section ? 1+[self.bill.families allObjects].count : 1; 
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return section ? @"Name" : @"Families";
+    return !section ? @"Name" : @"Families";
+}
+
+- (id)tableView:(UITableView *)tableView cellWithReuseIdentifier:(NSString*)reuseIdentifier {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    }
+    
+    return cell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if (indexPath.section == 0) {
+        TextEditCell* cell = [self tableView:tableView cellWithReuseIdentifier:@"TextEditCell"];
+        [cell apply:self.bill.name];
+        return cell;
     }
-    
-    // Configure the cell...
-    
+
+    if (indexPath.row < [self.bill.families allObjects].count - 1) {
+        FamilyCell* cell = [self tableView:tableView cellWithReuseIdentifier:@"FamilyCell"];
+        [cell apply:[self.bill.families.allObjects objectAtIndex:indexPath.row]]; 
+        return cell;
+    }
+
+    FamilyButtonsCell* cell = [self tableView:tableView cellWithReuseIdentifier:@"FamilyButtonsCell"];
+    cell.delegate = self;
     return cell;
 }
 
@@ -126,5 +156,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+
 
 @end
