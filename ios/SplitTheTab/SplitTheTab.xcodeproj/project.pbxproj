@@ -276,6 +276,7 @@
 		E22D62C814C71B38007BE25C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E29C4FD214CC18C000C765BB /* Punica.xcdatamodeld */,
 				E281CA2214CDBCF900CE881E /* _Bill.h */,
 				E281CA2314CDBCF900CE881E /* _Bill.m */,
 				E281CA2414CDBCF900CE881E /* _Category.h */,
@@ -308,7 +309,6 @@
 				E281CA3F14CDBCF900CE881E /* Income.m */,
 				E281CA4014CDBCF900CE881E /* Transaction.h */,
 				E281CA4114CDBCF900CE881E /* Transaction.m */,
-				E29C4FD214CC18C000C765BB /* Punica.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";

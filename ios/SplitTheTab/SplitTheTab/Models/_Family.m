@@ -43,8 +43,19 @@
 
 
 
+@dynamic bill;
+
+	
+
 @dynamic categories;
 
+	
+- (NSMutableSet*)categoriesSet {
+	[self willAccessValueForKey:@"categories"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"categories"];
+	[self didAccessValueForKey:@"categories"];
+	return result;
+}
 	
 
 

@@ -4,7 +4,7 @@
 #import <CoreData/CoreData.h>
 #import "Transaction.h"
 
-
+@class ExpensePhoto;
 
 
 
@@ -46,11 +46,10 @@
 
 
 
-@property (nonatomic, retain) NSString *photo;
 
+@property (nonatomic, retain) ExpensePhoto* photos;
 
-//- (BOOL)validatePhoto:(id*)value_ error:(NSError**)error_;
-
+//- (BOOL)validatePhotos:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -82,10 +81,9 @@
 
 
 
-- (NSString*)primitivePhoto;
-- (void)setPrimitivePhoto:(NSString*)value;
 
-
+- (ExpensePhoto*)primitivePhotos;
+- (void)setPrimitivePhotos:(ExpensePhoto*)value;
 
 
 @end

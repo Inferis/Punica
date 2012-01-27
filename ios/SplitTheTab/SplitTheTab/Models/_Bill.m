@@ -67,13 +67,45 @@
 @dynamic expenses;
 
 	
+- (NSMutableSet*)expensesSet {
+	[self willAccessValueForKey:@"expenses"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"expenses"];
+	[self didAccessValueForKey:@"expenses"];
+	return result;
+}
+	
+
+@dynamic families;
+
+	
+- (NSMutableSet*)familiesSet {
+	[self willAccessValueForKey:@"families"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"families"];
+	[self didAccessValueForKey:@"families"];
+	return result;
+}
+	
 
 @dynamic incomes;
 
 	
+- (NSMutableSet*)incomesSet {
+	[self willAccessValueForKey:@"incomes"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"incomes"];
+	[self didAccessValueForKey:@"incomes"];
+	return result;
+}
+	
 
 @dynamic transactions;
 
+	
+- (NSMutableSet*)transactionsSet {
+	[self willAccessValueForKey:@"transactions"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"transactions"];
+	[self didAccessValueForKey:@"transactions"];
+	return result;
+}
 	
 
 

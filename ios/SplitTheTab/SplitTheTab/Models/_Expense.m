@@ -57,12 +57,9 @@
 
 
 
-@dynamic photo;
+@dynamic photos;
 
-
-
-
-
+	
 
 
 

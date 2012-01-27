@@ -5,6 +5,7 @@
 
 
 @class Expense;
+@class Family;
 @class Income;
 @class Transaction;
 
@@ -58,23 +59,30 @@
 
 
 
-@property (nonatomic, retain) Expense* expenses;
+@property (nonatomic, retain) NSSet* expenses;
 
-//- (BOOL)validateExpenses:(id*)value_ error:(NSError**)error_;
-
-
-
-
-@property (nonatomic, retain) Income* incomes;
-
-//- (BOOL)validateIncomes:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)expensesSet;
 
 
 
 
-@property (nonatomic, retain) Transaction* transactions;
+@property (nonatomic, retain) NSSet* families;
 
-//- (BOOL)validateTransactions:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)familiesSet;
+
+
+
+
+@property (nonatomic, retain) NSSet* incomes;
+
+- (NSMutableSet*)incomesSet;
+
+
+
+
+@property (nonatomic, retain) NSSet* transactions;
+
+- (NSMutableSet*)transactionsSet;
 
 
 
@@ -82,6 +90,26 @@
 @end
 
 @interface _Bill (CoreDataGeneratedAccessors)
+
+- (void)addExpenses:(NSSet*)value_;
+- (void)removeExpenses:(NSSet*)value_;
+- (void)addExpensesObject:(Expense*)value_;
+- (void)removeExpensesObject:(Expense*)value_;
+
+- (void)addFamilies:(NSSet*)value_;
+- (void)removeFamilies:(NSSet*)value_;
+- (void)addFamiliesObject:(Family*)value_;
+- (void)removeFamiliesObject:(Family*)value_;
+
+- (void)addIncomes:(NSSet*)value_;
+- (void)removeIncomes:(NSSet*)value_;
+- (void)addIncomesObject:(Income*)value_;
+- (void)removeIncomesObject:(Income*)value_;
+
+- (void)addTransactions:(NSSet*)value_;
+- (void)removeTransactions:(NSSet*)value_;
+- (void)addTransactionsObject:(Transaction*)value_;
+- (void)removeTransactionsObject:(Transaction*)value_;
 
 @end
 
@@ -113,18 +141,23 @@
 
 
 
-- (Expense*)primitiveExpenses;
-- (void)setPrimitiveExpenses:(Expense*)value;
+- (NSMutableSet*)primitiveExpenses;
+- (void)setPrimitiveExpenses:(NSMutableSet*)value;
 
 
 
-- (Income*)primitiveIncomes;
-- (void)setPrimitiveIncomes:(Income*)value;
+- (NSMutableSet*)primitiveFamilies;
+- (void)setPrimitiveFamilies:(NSMutableSet*)value;
 
 
 
-- (Transaction*)primitiveTransactions;
-- (void)setPrimitiveTransactions:(Transaction*)value;
+- (NSMutableSet*)primitiveIncomes;
+- (void)setPrimitiveIncomes:(NSMutableSet*)value;
+
+
+
+- (NSMutableSet*)primitiveTransactions;
+- (void)setPrimitiveTransactions:(NSMutableSet*)value;
 
 
 @end

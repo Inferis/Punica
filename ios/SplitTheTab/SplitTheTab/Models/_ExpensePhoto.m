@@ -36,6 +36,24 @@
 
 
 
+@dynamic dateTaken;
+
+
+
+
+
+
+@dynamic image;
+
+
+
+
+
+
+@dynamic expense;
+
+	
+
 
 
 

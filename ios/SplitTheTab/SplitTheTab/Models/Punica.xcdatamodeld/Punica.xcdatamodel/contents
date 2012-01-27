@@ -2,30 +2,36 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bill" representedClassName="Bill" syncable="YES">
         <attribute name="closeDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" attributeType="Date" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="expenses" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
-        <relationship name="incomes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Income" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
-        <relationship name="transactions" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="families" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Family" inverseName="bill" inverseEntity="Family" syncable="YES"/>
+        <relationship name="incomes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Income" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="bill" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Category" representedClassName="Category" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="ratio" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="ratio" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="Expense" representedClassName="Expense" parentEntity="Transaction" syncable="YES">
         <attribute name="locationLatitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationLongitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="ExpensePhoto" inverseName="expense" inverseEntity="ExpensePhoto" syncable="YES"/>
     </entity>
-    <entity name="ExpensePhoto" representedClassName="ExpensePhoto" syncable="YES"/>
+    <entity name="ExpensePhoto" representedClassName="ExpensePhoto" syncable="YES">
+        <attribute name="dateTaken" attributeType="Date" syncable="YES"/>
+        <attribute name="image" attributeType="String" syncable="YES"/>
+        <relationship name="expense" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="photos" inverseEntity="Expense" syncable="YES"/>
+    </entity>
     <entity name="Family" representedClassName="Family" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="categories" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FamilyCategory" inverseName="family" inverseEntity="FamilyCategory" syncable="YES"/>
+        <relationship name="bill" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="families" inverseEntity="Bill" syncable="YES"/>
+        <relationship name="categories" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="FamilyCategory" inverseName="family" inverseEntity="FamilyCategory" syncable="YES"/>
     </entity>
     <entity name="FamilyCategory" representedClassName="FamilyCategory" parentEntity="Category" syncable="YES">
-        <relationship name="family" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="categories" inverseEntity="Family" syncable="YES"/>
+        <relationship name="family" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="categories" inverseEntity="Family" syncable="YES"/>
     </entity>
     <entity name="Income" representedClassName="Income" parentEntity="Transaction" syncable="YES"/>
     <entity name="Transaction" representedClassName="Transaction" isAbstract="YES" syncable="YES">
@@ -33,14 +39,14 @@
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="transactionDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="what" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="bill" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="expenses" inverseEntity="Bill" syncable="YES"/>
+        <relationship name="bill" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="expenses" inverseEntity="Bill" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Bill" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Bill" positionX="160" positionY="192" width="128" height="165"/>
         <element name="Category" positionX="160" positionY="192" width="128" height="75"/>
         <element name="Expense" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="ExpensePhoto" positionX="160" positionY="192" width="128" height="45"/>
-        <element name="Family" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="ExpensePhoto" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Family" positionX="160" positionY="192" width="128" height="90"/>
         <element name="FamilyCategory" positionX="160" positionY="192" width="128" height="60"/>
         <element name="Income" positionX="160" positionY="192" width="128" height="45"/>
         <element name="Transaction" positionX="160" positionY="192" width="128" height="120"/>
