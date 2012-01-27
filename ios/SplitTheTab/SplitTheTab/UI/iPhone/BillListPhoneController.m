@@ -11,6 +11,7 @@
 #import "CentralBillPhoneController.h"
 #import "SettingsPhoneController.h"
 #import "BillListCell.h"
+#import "EditBillPhoneController.h"
 
 @interface BillListPhoneController () <IIViewDeckControllerDelegate> {
     CGRect _originalFrame;
@@ -88,16 +89,19 @@
 #pragma mark - Actions
 
 - (IBAction)settingsPressed {
-    
     SettingsPhoneController* settingsController = [[SettingsPhoneController alloc] initWithNibName:@"SettingsPhoneView" bundle:nil];
-
+    
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:settingsController];
-    navController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self.viewDeckController presentModalViewController:navController animated:YES];
 }
 
 - (void)addBill {
+    EditBillPhoneController* editorController = [[EditBillPhoneController alloc] initWithNibName:@"EditBillPhoneView" bundle:nil];
     
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:editorController];
+    navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self.viewDeckController presentModalViewController:navController animated:YES];
 }
 
 #pragma mark - viewDeck controller
