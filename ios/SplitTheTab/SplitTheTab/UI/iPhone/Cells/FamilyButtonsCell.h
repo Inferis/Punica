@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FamilyButtonsCellDelegate <NSObject>
+
+- (void)didSelectAddFamily;
+- (void)didSelectCategorySettings;
+
+@end
+
 @interface FamilyButtonsCell : UITableViewCell
+
+@property (nonatomic, retain) id<FamilyButtonsCellDelegate> delegate;
 
 @end
